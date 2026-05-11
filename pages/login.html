@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to Pole Dancing Studio — Access your classes, bookings and membership." />
+  <title>Login — Pole Dancing Studio</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .auth-side-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=80') center/cover no-repeat;
+      opacity: .2;
+    }
+    .auth-side-decor {
+      position: absolute; top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(201,24,74,.4), transparent 60%);
+      pointer-events: none;
+    }
+    .social-signin { display:flex; gap:.75rem; justify-content:center; }
+    .social-btn { flex:1; display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.75rem; border:2px solid var(--border); border-radius:var(--radius-md); font-weight:600; font-size:.88rem; color:var(--text-primary); background:var(--bg-card); transition:var(--transition-bounce); }
+    .social-btn:hover { border-color:var(--primary); color:var(--primary); transform:translateY(-3px); box-shadow:var(--shadow-md); }
+    .benefit-item { display:flex; gap:.75rem; align-items:flex-start; margin-bottom:1.5rem; }
+    .benefit-icon { width:40px; height:40px; background:rgba(255,255,255,.15); border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:#fff; flex-shrink:0; }
+    .benefit-text h4 { color:#fff; font-size:1rem; margin-bottom:.2rem; }
+    .benefit-text p { color:rgba(255,255,255,.7); font-size:.85rem; }
+  </style>
+</head>
+<body>
+
+<!-- Minimal header for auth pages -->
+<div style="position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;">
+  <a href="index.html" class="brand">
+    <div class="brand-logo">🩰</div>
+    <span class="brand-name" style="color:var(--text-primary)">Pole <span>Dancing</span></span>
+  </a>
+  <div style="display:flex;gap:.75rem;align-items:center;">
+    <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" style="background:var(--bg-secondary);color:var(--text-primary);" aria-label="Toggle RTL"><i class="fas fa-language"></i></button>
+    <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" style="background:var(--bg-secondary);color:var(--text-primary);" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+  </div>
+</div>
+
+<div class="auth-container">
+  <!-- Left Side - Decorative -->
+  <div class="auth-side">
+    <div class="auth-side-bg"></div>
+    <div class="auth-side-decor"></div>
+    <div class="auth-side-content">
+      <div class="brand-logo" style="width:60px;height:60px;font-size:2rem;margin:0 auto 1.5rem;">🩰</div>
+      <h2 style="font-size:2.2rem;margin-bottom:1rem;">Welcome Back</h2>
+      <p style="color:rgba(255,255,255,.75);margin-bottom:3rem;">Sign in to access your class bookings, membership details, and exclusive student content.</p>
+      <div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-calendar-check"></i></div>
+          <div class="benefit-text"><h4>Manage Bookings</h4><p>Book, reschedule, or cancel classes anytime.</p></div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="benefit-text"><h4>Track Progress</h4><p>See your attendance history and milestone achievements.</p></div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="fas fa-video"></i></div>
+          <div class="benefit-text"><h4>Video Library</h4><p>Access exclusive training videos and tutorials.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side - Form -->
+  <div class="auth-form-side">
+    <div class="auth-form-container">
+      <div class="auth-logo">
+        <div class="brand-logo" style="width:44px;height:44px;font-size:1.4rem;">🩰</div>
+        <span class="brand-name" style="color:var(--text-primary);font-size:1.2rem;">Pole <span>Dancing</span></span>
+      </div>
+
+      <h1 class="auth-title">Sign In</h1>
+      <p class="auth-subtitle">Don't have an account? <a href="register.html">Create one free</a></p>
+
+      <!-- Social login -->
+      <div class="social-signin">
+        <button class="social-btn"><i class="fab fa-google"></i> Google</button>
+        <button class="social-btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+      </div>
+      <div class="auth-divider">or continue with email</div>
+
+      <!-- Login form -->
+      <form data-validate-form>
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="you@example.com" data-validate="required,email" autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <div style="display:flex;justify-content:space-between;margin-bottom:.5rem;">
+            <label class="form-label" for="password" style="margin-bottom:0;">Password</label>
+            <a href="#" style="font-size:.85rem;color:var(--primary);font-weight:600;">Forgot password?</a>
+          </div>
+          <div class="password-toggle">
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" data-validate="required,minLength:6" autocomplete="current-password" />
+            <button type="button" class="toggle-btn fas fa-eye" aria-label="Toggle password visibility"></button>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="remember" />
+            <label for="remember" style="font-size:.88rem;color:var(--text-secondary);">Remember me for 30 days</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-bottom:1.5rem;">
+          <i class="fas fa-sign-in-alt"></i> Sign In
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        New to aerial fitness? <a href="register.html">Create a free account</a>
+      </div>
+      <div style="text-align:center;margin-top:1rem;">
+        <a href="index.html" style="font-size:.85rem;color:var(--text-light);"><i class="fas fa-arrow-left"></i> Back to Home</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

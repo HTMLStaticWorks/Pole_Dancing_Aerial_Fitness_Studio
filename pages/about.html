@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Pole Dancing Studio — Our story, mission, and the passionate team behind Chennai's premier aerial fitness studio." />
+  <title>About Us — Pole Dancing Studio</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .mission-grid { display:grid; grid-template-columns:1fr; gap:3rem; align-items:center; }
+    @media(min-width:1024px){ .mission-grid { grid-template-columns:1fr 1fr; } }
+    .mission-image { position:relative; border-radius:var(--radius-xl); overflow:hidden; }
+    .mission-image img { width:100%; height:420px; object-fit:cover; }
+    .mission-image-badge {
+      position:absolute; bottom:2rem; right:-1rem;
+      background:linear-gradient(135deg,var(--primary),var(--primary-light));
+      color:#fff; padding:1.25rem 1.75rem; border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-lg); text-align:center;
+    }
+    .mission-image-badge .big { font-family:var(--font-display);font-size:2.5rem;font-weight:900;display:block;line-height:1; }
+    .mission-image-badge small { font-size:.8rem;opacity:.9; }
+    .values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; }
+    .value-card {
+      padding:2rem 1.5rem; border-radius:var(--radius-lg); text-align:center;
+      border:1px solid var(--border); background:var(--bg-card);
+      transition:var(--transition-bounce);
+    }
+    .value-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-color:var(--primary-light); }
+    .value-icon { font-size:2.5rem; display:block; margin-bottom:1rem; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="index.html" class="brand"><div class="brand-logo">🩰</div><span class="brand-name">Pole <span>Dancing</span></span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL"><i class="fas fa-language"></i></button>
+      <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link">Home 2</a>
+  <a href="about.html" class="nav-link active">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
+    <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span>/</span><span class="current">About Us</span>
+  </nav>
+  <h1>Our Story</h1>
+  <p>From a small studio with one pole to Chennai's premier aerial fitness destination — discover the passion behind every class.</p>
+</div>
+
+<!-- ══ SECTION 1: MISSION & STORY ══ -->
+<section class="section" aria-label="Our mission">
+  <div class="container">
+    <div class="mission-grid">
+      <div class="animate-on-scroll">
+        <span class="section-label">Our Mission</span>
+        <h2 class="section-title">Strength, Grace &amp; Community</h2>
+        <p style="margin-bottom:1.5rem;">Founded in 2016 by Kavya Sundaram, Pole Dancing Studio began as a vision to bring aerial arts to everyday people. What started with two poles in a borrowed space has grown into a vibrant 3,000 sq ft studio, home to over 500 active students.</p>
+        <p style="margin-bottom:2rem;">We believe that aerial fitness is for every body, every age, every background. Our inclusive, empowering approach breaks barriers and builds confidence that extends far beyond the studio walls.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="register.html" class="btn btn-primary"><i class="fas fa-play"></i> Start Your Journey</a>
+          <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i> Talk to Us</a>
+        </div>
+      </div>
+      <div class="mission-image animate-on-scroll delay-2">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Aerial performer in studio" loading="lazy" />
+        <div class="mission-image-badge">
+          <span class="big">8+</span>
+          <small>Years of Excellence</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: STATS + VALUES ══ -->
+<section class="section bg-secondary-section" aria-label="Our values and stats">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">By the Numbers</span>
+      <h2 class="section-title">A Studio Built on Results</h2>
+    </div>
+    <div class="stats-grid" style="margin-bottom:5rem;">
+      <div class="stat-card animate-on-scroll delay-1">
+        <span class="stat-number" data-counter data-target="500" data-suffix="+">500+</span>
+        <div class="stat-label">Active Students</div>
+        <div class="stat-sublabel">Across all programs</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-2">
+        <span class="stat-number" data-counter data-target="8" data-suffix="">8</span>
+        <div class="stat-label">Expert Instructors</div>
+        <div class="stat-sublabel">Certified professionals</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-3">
+        <span class="stat-number" data-counter data-target="12" data-suffix="+">12+</span>
+        <div class="stat-label">Class Types</div>
+        <div class="stat-sublabel">Something for everyone</div>
+      </div>
+      <div class="stat-card animate-on-scroll delay-4">
+        <span class="stat-number" data-counter data-target="15" data-suffix="">15</span>
+        <div class="stat-label">Awards Won</div>
+        <div class="stat-sublabel">Regional & national</div>
+      </div>
+    </div>
+
+    <div class="text-center animate-on-scroll" style="margin-bottom:2.5rem;">
+      <span class="section-label">Our Values</span>
+      <h2 class="section-title">What We Stand For</h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card animate-on-scroll delay-1">
+        <span class="value-icon">💪</span>
+        <h3>Empowerment</h3>
+        <p>We help every student discover strength they never knew they had — physically and mentally.</p>
+      </div>
+      <div class="value-card animate-on-scroll delay-2">
+        <span class="value-icon">🌈</span>
+        <h3>Inclusivity</h3>
+        <p>Every body is welcome. We celebrate diversity and create a judgment-free space for all.</p>
+      </div>
+      <div class="value-card animate-on-scroll delay-3">
+        <span class="value-icon">🛡️</span>
+        <h3>Safety</h3>
+        <p>Rigorous safety protocols, quality equipment, and trained spotters ensure you're always protected.</p>
+      </div>
+      <div class="value-card animate-on-scroll delay-4">
+        <span class="value-icon">🎯</span>
+        <h3>Excellence</h3>
+        <p>We hold our teaching and student experience to the highest professional standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: TEAM ══ -->
+<section class="section" aria-label="Our team">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">The Dream Team</span>
+      <h2 class="section-title">Meet Your Coaches</h2>
+      <p class="section-desc">Passionate, certified, and dedicated to your growth — our instructors bring world-class expertise to every class.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card animate-on-scroll delay-1">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Kavya Sundaram" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Kavya Sundaram</h3>
+        <div class="team-role">Founder & Head Pole Instructor</div>
+        <p class="team-desc">IPDFA certified, national champion 2022. 10+ years of performance and teaching.</p>
+      </div>
+      <div class="team-card animate-on-scroll delay-2">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Riya Mehta" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Riya Mehta</h3>
+        <div class="team-role">Aerial Silks Specialist</div>
+        <p class="team-desc">Former circus performer. Makes the impossible look effortless on the silks.</p>
+      </div>
+      <div class="team-card animate-on-scroll delay-3">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&q=80" alt="Sneha Krishnan" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Sneha Krishnan</h3>
+        <div class="team-role">Lyra & Hoop Coach</div>
+        <p class="team-desc">Contemporary dance background blended with aerial expertise. Lyra artist of the year 2023.</p>
+      </div>
+      <div class="team-card animate-on-scroll delay-4">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80" alt="Pritha Roy" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Pritha Roy</h3>
+        <div class="team-role">Flexibility & Conditioning</div>
+        <p class="team-desc">Yoga & acrobatics specialist helping students unlock mobility they never knew they had.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner"><div class="container">
+  <span class="section-label" style="color:var(--accent)">Join the Family</span>
+  <h2>Ready to Become Part of Our Story?</h2>
+  <p>Your aerial journey starts with a single class. First one's on us.</p>
+  <div class="cta-actions">
+    <a href="register.html" class="btn btn-accent btn-lg"><i class="fas fa-gift"></i> Claim Free Trial</a>
+    <a href="contact.html" class="btn btn-ghost btn-lg"><i class="fas fa-envelope"></i> Get in Touch</a>
+  </div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo"><div class="brand-logo">🩰</div><div><div class="footer-brand-name">Pole Dancing</div><div class="footer-brand-tagline">Aerial Fitness Studio</div></div></div>
+      <p class="footer-desc">Empowering bodies and spirits through the art of aerial movement.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div><h4 class="footer-heading">Quick Links</h4><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="services.html" class="footer-link">Services</a></li><li><a href="blog.html" class="footer-link">Blog</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+    <div><h4 class="footer-heading">Classes</h4><ul class="footer-links"><li><a href="services.html" class="footer-link">Pole Fitness</a></li><li><a href="services.html" class="footer-link">Aerial Silks</a></li><li><a href="services.html" class="footer-link">Lyra/Hoop</a></li><li><a href="services.html" class="footer-link">Flexibility</a></li><li><a href="services.html" class="footer-link">Youth Classes</a></li></ul></div>
+    <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+919876543210" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +91 98765 43210</a></li><li><a href="mailto:hello@poledancing.in" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@poledancing.in</a></li><li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Anna Nagar, Chennai</a></li><li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Mon–Sun: 7AM–9PM</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 Pole Dancing Studio. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

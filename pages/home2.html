@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pole Dancing Studio — Alternative landing page featuring membership, schedule, and instructors." />
+  <title>Pole Dancing Studio — Home 2</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Home2 specific: split hero */
+    .hero2 {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+    @media(min-width:1024px){ .hero2 { grid-template-columns: 1fr 1fr; } }
+    .hero2-content {
+      background: linear-gradient(135deg, var(--secondary) 0%, #2d1b3d 100%);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: calc(var(--nav-height) + 3rem) 3rem 4rem;
+      position: relative; z-index: 1;
+    }
+    .hero2-image {
+      position: relative; min-height: 50vh;
+    }
+    @media(min-width:1024px){ .hero2-image { min-height: 100vh; } }
+    .hero2-image img { width: 100%; height: 100%; object-fit: cover; }
+    .hero2-image::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--secondary) 0%, transparent 30%);
+    }
+    .floating-badge {
+      position: absolute;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      box-shadow: var(--shadow-lg);
+      display: flex; align-items: center; gap: 0.75rem;
+      z-index: 2;
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+    @keyframes floatBadge {
+      0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)}
+    }
+    .floating-badge-1 { bottom: 8rem; left: 1rem; }
+    .floating-badge-2 { top: 8rem; right: 1rem; }
+    @media(min-width:1024px){
+      .floating-badge-1 { bottom: 8rem; left: -4rem; }
+      .floating-badge-2 { top: 8rem; right: 2rem; }
+    }
+    .fb-icon { width:44px;height:44px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0; }
+    .fb-text .label { font-size:.75rem;color:var(--text-light);letter-spacing:.5px; }
+    .fb-text .value { font-weight:700;font-size:.95rem;color:var(--text-primary); }
+    /* Video section */
+    .video-section { padding: 4rem 1.5rem; }
+    /* Schedule */
+    .schedule-tabs { display:flex;gap:.75rem;margin-bottom:2rem;flex-wrap:wrap;justify-content:center; }
+    .tab-btn { padding:.6rem 1.4rem;border:2px solid var(--border);border-radius:var(--radius-full);font-weight:600;font-size:.9rem;color:var(--text-secondary);transition:var(--transition-bounce); }
+    .tab-btn:hover,.tab-btn.active { background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px); }
+    .tab-content { display:none; }
+    .tab-content.active { display:block;animation:fadeIn .4s ease; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="index.html" class="brand">
+      <div class="brand-logo">🩰</div>
+      <span class="brand-name">Pole <span>Dancing</span></span>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link active">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL"><i class="fas fa-language"></i></button>
+      <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="index.html" class="nav-link">Home</a>
+  <a href="home2.html" class="nav-link active">Home 2</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
+    <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: SPLIT HERO ══ -->
+<section class="hero2" aria-label="Hero alternate">
+  <div class="hero2-content">
+    <div class="hero-badge" style="align-self:flex-start;margin-bottom:1.5rem;">
+      <i class="fas fa-award"></i> <span>India's #1 Aerial Studio</span>
+    </div>
+    <h1 style="color:#fff;margin-bottom:1.5rem;">
+      Where <span style="color:var(--accent);font-family:var(--font-script)">Strength</span> Becomes Art
+    </h1>
+    <p style="color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:2rem;max-width:480px;">
+      Unlock your potential through pole, silks, and lyra. Expert coaching, vibrant community, transformative results.
+    </p>
+    <div class="hero-actions" style="margin-bottom:3rem;">
+      <a href="register.html" class="btn btn-primary btn-lg"><i class="fas fa-user-plus"></i> Join Now — Free Trial</a>
+      <a href="#schedule" class="btn btn-ghost btn-lg"><i class="fas fa-calendar"></i> See Schedule</a>
+    </div>
+    <!-- Mini stats -->
+    <div style="display:flex;gap:2rem;flex-wrap:wrap;">
+      <div><div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--accent)">500+</div><div style="color:rgba(255,255,255,.6);font-size:.85rem;">Happy Students</div></div>
+      <div><div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--accent)">12</div><div style="color:rgba(255,255,255,.6);font-size:.85rem;">Class Types</div></div>
+      <div><div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--accent)">8</div><div style="color:rgba(255,255,255,.6);font-size:.85rem;">Expert Coaches</div></div>
+    </div>
+  </div>
+  <div class="hero2-image">
+    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=900&q=80" alt="Aerial performer" loading="eager" />
+    <div class="floating-badge floating-badge-1">
+      <div class="fb-icon"><i class="fas fa-medal"></i></div>
+      <div class="fb-text"><div class="label">CERTIFIED</div><div class="value">Pro Instructors</div></div>
+    </div>
+    <div class="floating-badge floating-badge-2">
+      <div class="fb-icon"><i class="fas fa-heart"></i></div>
+      <div class="fb-text"><div class="label">RATING</div><div class="value">5.0 ★★★★★</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: APPARATUS OPTIONS ══ -->
+<section class="section" aria-label="Apparatus options">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Choose Your Apparatus</span>
+      <h2 class="section-title">Three Paths, One Studio</h2>
+      <p class="section-desc">Each aerial apparatus offers a unique style of movement and fitness. Explore all three, or fall in love with one.</p>
+    </div>
+    <div class="apparatus-grid">
+      <div class="apparatus-card animate-on-scroll delay-1">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Pole Dancing" loading="lazy" />
+        <div class="apparatus-overlay">
+          <span class="apparatus-tag">POLE</span>
+          <h3>Pole Fitness</h3>
+          <p>Spins, climbs, and inversions. Build incredible strength and grace around the pole. Beginner to advanced levels available.</p>
+        </div>
+      </div>
+      <div class="apparatus-card animate-on-scroll delay-2">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Aerial Silks" loading="lazy" />
+        <div class="apparatus-overlay">
+          <span class="apparatus-tag">SILKS</span>
+          <h3>Aerial Silks</h3>
+          <p>Float and flow through fabric-draped air. Aerial silks develops unmatched body awareness and fluid movement quality.</p>
+        </div>
+      </div>
+      <div class="apparatus-card animate-on-scroll delay-3">
+        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80" alt="Lyra Hoop" loading="lazy" />
+        <div class="apparatus-overlay">
+          <span class="apparatus-tag">LYRA</span>
+          <h3>Lyra / Aerial Hoop</h3>
+          <p>Dance within a suspended steel circle. Lyra combines dance expression with aerial arts for breathtaking visual performances.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: WEEKLY SCHEDULE ══ -->
+<section class="section bg-secondary-section" id="schedule" aria-label="Class schedule">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Class Schedule</span>
+      <h2 class="section-title">Plan Your Week</h2>
+      <p class="section-desc">Classes run seven days a week to fit your lifestyle. View by day and reserve your spot instantly.</p>
+    </div>
+    <div class="schedule-tabs">
+      <button class="tab-btn active" onclick="showTab('mon',this)">Mon</button>
+      <button class="tab-btn" onclick="showTab('tue',this)">Tue</button>
+      <button class="tab-btn" onclick="showTab('wed',this)">Wed</button>
+      <button class="tab-btn" onclick="showTab('thu',this)">Thu</button>
+      <button class="tab-btn" onclick="showTab('fri',this)">Fri</button>
+      <button class="tab-btn" onclick="showTab('sat',this)">Sat</button>
+    </div>
+    <div id="mon" class="tab-content active">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>07:00 AM</td><td><span class="class-tag tag-pole">Pole Basics</span></td><td>Kavya S.</td><td>Beginner</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>10:00 AM</td><td><span class="class-tag tag-silks">Aerial Silks Intro</span></td><td>Riya M.</td><td>All levels</td><td>2 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>06:00 PM</td><td><span class="class-tag tag-lyra">Lyra Flow</span></td><td>Sneha K.</td><td>Intermediate</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>07:30 PM</td><td><span class="class-tag tag-pole">Pole Intermediate</span></td><td>Kavya S.</td><td>Intermediate</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="tue" class="tab-content">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>08:00 AM</td><td><span class="class-tag tag-aerial">Flexibility & Stretch</span></td><td>Pritha R.</td><td>All levels</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>05:30 PM</td><td><span class="class-tag tag-silks">Aerial Silks Adv.</span></td><td>Riya M.</td><td>Advanced</td><td>1 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>07:00 PM</td><td><span class="class-tag tag-pole">Exotic Pole</span></td><td>Kavya S.</td><td>Intermediate</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="wed" class="tab-content">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>07:00 AM</td><td><span class="class-tag tag-lyra">Lyra Beginners</span></td><td>Sneha K.</td><td>Beginner</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>10:00 AM</td><td><span class="class-tag tag-pole">Pole Fitness</span></td><td>Kavya S.</td><td>All levels</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>06:00 PM</td><td><span class="class-tag tag-silks">Silks & Strength</span></td><td>Riya M.</td><td>Intermediate</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="thu" class="tab-content">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>09:00 AM</td><td><span class="class-tag tag-aerial">Aerial Yoga</span></td><td>Pritha R.</td><td>Beginner</td><td>7 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>06:00 PM</td><td><span class="class-tag tag-pole">Pole Advanced</span></td><td>Kavya S.</td><td>Advanced</td><td>2 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>07:30 PM</td><td><span class="class-tag tag-lyra">Lyra Performance</span></td><td>Sneha K.</td><td>Advanced</td><td>Full</td><td><button class="btn btn-secondary btn-sm" disabled>Waitlist</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="fri" class="tab-content">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>07:00 AM</td><td><span class="class-tag tag-pole">Morning Pole Flow</span></td><td>Kavya S.</td><td>All levels</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>05:00 PM</td><td><span class="class-tag tag-silks">Silks Choreo</span></td><td>Riya M.</td><td>Intermediate</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>07:00 PM</td><td><span class="class-tag tag-lyra">Friday Lyra Special</span></td><td>Sneha K.</td><td>All levels</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="sat" class="tab-content">
+      <table class="schedule-table">
+        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>08:00 AM</td><td><span class="class-tag tag-pole">Weekend Beginners</span></td><td>Kavya S.</td><td>Beginner</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>10:00 AM</td><td><span class="class-tag tag-silks">Saturday Silks</span></td><td>Riya M.</td><td>All levels</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>12:00 PM</td><td><span class="class-tag tag-lyra">Party & Lyra</span></td><td>Sneha K.</td><td>All levels</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          <tr><td>04:00 PM</td><td><span class="class-tag tag-aerial">Open Practice</span></td><td>All coaches</td><td>Intermediate+</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: INSTRUCTORS ══ -->
+<section class="section" aria-label="Instructors">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Meet the Team</span>
+      <h2 class="section-title">Your Expert Coaches</h2>
+      <p class="section-desc">Our instructors bring years of performance, competition, and teaching experience to every single class.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card animate-on-scroll delay-1">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Kavya Sundaram" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Kavya Sundaram</h3>
+        <div class="team-role">Head Pole Instructor</div>
+        <p class="team-desc">10+ years competing & teaching. IPDFA certified, national champion 2022.</p>
+      </div>
+      <div class="team-card animate-on-scroll delay-2">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&q=80" alt="Riya Mehta" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Riya Mehta</h3>
+        <div class="team-role">Aerial Silks Specialist</div>
+        <p class="team-desc">Former circus performer with Cirque dreams. Makes silks look effortless.</p>
+      </div>
+      <div class="team-card animate-on-scroll delay-3">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&q=80" alt="Sneha Krishnan" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Sneha Krishnan</h3>
+        <div class="team-role">Lyra & Hoop Coach</div>
+        <p class="team-desc">Contemporary dance background blended with aerial expertise. Lyra artist of the year 2023.</p>
+      </div>
+      <div class="team-card animate-on-scroll delay-4">
+        <div class="team-avatar">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80" alt="Pritha Roy" loading="lazy" />
+          <div class="team-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <h3 class="team-name">Pritha Roy</h3>
+        <div class="team-role">Flexibility & Conditioning</div>
+        <p class="team-desc">Yoga & acrobatics specialist. Helps students unlock mobility they never knew they had.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: MEMBERSHIP ══ -->
+<section class="section membership-section" aria-label="Membership plans">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Membership Plans</span>
+      <h2 class="section-title">Invest in Yourself</h2>
+      <p class="section-desc">Choose the plan that fits your goals and budget. All memberships include access to our online booking and community hub.</p>
+    </div>
+    <div class="membership-grid">
+      <div class="membership-card animate-on-scroll delay-1">
+        <div class="membership-icon"><i class="fas fa-seedling"></i></div>
+        <h3 class="membership-name">Starter</h3>
+        <div class="membership-price">₹2,499</div>
+        <div class="membership-period">per month</div>
+        <ul class="membership-features">
+          <li><i class="fas fa-check"></i> 4 classes/month</li>
+          <li><i class="fas fa-check"></i> Any single apparatus</li>
+          <li><i class="fas fa-check"></i> Community access</li>
+          <li class="excluded"><i class="fas fa-times"></i> Open practice</li>
+          <li class="excluded"><i class="fas fa-times"></i> Guest passes</li>
+          <li class="excluded"><i class="fas fa-times"></i> Workshop discounts</li>
+        </ul>
+        <a href="register.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Get Started</a>
+      </div>
+      <div class="membership-card popular animate-on-scroll delay-2">
+        <span class="popular-badge">Most Popular</span>
+        <div class="membership-icon"><i class="fas fa-fire"></i></div>
+        <h3 class="membership-name">Studio</h3>
+        <div class="membership-price">₹4,999</div>
+        <div class="membership-period">per month</div>
+        <ul class="membership-features">
+          <li><i class="fas fa-check"></i> Unlimited classes</li>
+          <li><i class="fas fa-check"></i> All apparatus access</li>
+          <li><i class="fas fa-check"></i> Community access</li>
+          <li><i class="fas fa-check"></i> Open practice (2/wk)</li>
+          <li><i class="fas fa-check"></i> 2 guest passes/month</li>
+          <li class="excluded"><i class="fas fa-times"></i> Workshop discounts</li>
+        </ul>
+        <a href="register.html" class="btn btn-primary" style="width:100%;justify-content:center;">Join Now</a>
+      </div>
+      <div class="membership-card animate-on-scroll delay-3">
+        <div class="membership-icon"><i class="fas fa-crown"></i></div>
+        <h3 class="membership-name">Elite</h3>
+        <div class="membership-price">₹7,999</div>
+        <div class="membership-period">per month</div>
+        <ul class="membership-features">
+          <li><i class="fas fa-check"></i> Unlimited classes</li>
+          <li><i class="fas fa-check"></i> All apparatus access</li>
+          <li><i class="fas fa-check"></i> Community access</li>
+          <li><i class="fas fa-check"></i> Unlimited open practice</li>
+          <li><i class="fas fa-check"></i> 4 guest passes/month</li>
+          <li><i class="fas fa-check"></i> 20% workshop discount</li>
+        </ul>
+        <a href="register.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Go Elite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: FAQ + NEWSLETTER ══ -->
+<section class="section" aria-label="FAQ and newsletter">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:4rem;" class="faq-newsletter-grid">
+      <div>
+        <div class="animate-on-scroll">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list" style="margin-top:2rem;">
+          <div class="faq-item animate-on-scroll delay-1">
+            <div class="faq-question">Do I need prior experience? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Absolutely not! Our beginner classes are designed for complete newcomers. All you need is a positive attitude and comfortable workout clothes.</p></div>
+          </div>
+          <div class="faq-item animate-on-scroll delay-2">
+            <div class="faq-question">What should I wear? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Wear form-fitting shorts and a tank top for pole classes (skin contact helps grip). For silks and lyra, leggings work well. No socks or shoes needed on the apparatus.</p></div>
+          </div>
+          <div class="faq-item animate-on-scroll delay-3">
+            <div class="faq-question">Is it safe? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Safety is our top priority. We use professional-grade rigging, crash mats, and our instructors are trained in spotter techniques. All equipment is regularly inspected.</p></div>
+          </div>
+          <div class="faq-item animate-on-scroll delay-4">
+            <div class="faq-question">Can I try before committing? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Yes! We offer a free trial class for new students. Just book online and come experience the magic for yourself before choosing a membership.</p></div>
+          </div>
+          <div class="faq-item animate-on-scroll delay-5">
+            <div class="faq-question">Are there age restrictions? <i class="fas fa-chevron-down"></i></div>
+            <div class="faq-answer"><p>Adult classes are for 18+. We also offer dedicated youth aerial programs for ages 8–17 in a safe, age-appropriate curriculum.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent);">Limited Spots</span>
+    <h2>Transform Your Body This Month</h2>
+    <p>Join hundreds of students who found their strength and confidence in our studio. Your first class is completely free.</p>
+    <div class="cta-actions">
+      <a href="register.html" class="btn btn-accent btn-lg"><i class="fas fa-rocket"></i> Start Free Today</a>
+      <a href="services.html" class="btn btn-ghost btn-lg"><i class="fas fa-info-circle"></i> View All Classes</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">
+        <div class="brand-logo">🩰</div>
+        <div>
+          <div class="footer-brand-name">Pole Dancing</div>
+          <div class="footer-brand-tagline">Aerial Fitness Studio</div>
+        </div>
+      </div>
+      <p class="footer-desc">Empowering bodies and spirits through the art of aerial movement. Join our community and discover your strength.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="footer-heading">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html" class="footer-link">Home</a></li>
+        <li><a href="about.html" class="footer-link">About Us</a></li>
+        <li><a href="services.html" class="footer-link">Classes</a></li>
+        <li><a href="blog.html" class="footer-link">Blog</a></li>
+        <li><a href="contact.html" class="footer-link">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-heading">Classes</h4>
+      <ul class="footer-links">
+        <li><a href="services.html" class="footer-link">Pole Fitness</a></li>
+        <li><a href="services.html" class="footer-link">Aerial Silks</a></li>
+        <li><a href="services.html" class="footer-link">Lyra / Hoop</a></li>
+        <li><a href="services.html" class="footer-link">Flexibility</a></li>
+        <li><a href="services.html" class="footer-link">Youth Classes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="footer-heading">Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+919876543210" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +91 98765 43210</a></li>
+        <li><a href="mailto:hello@poledancing.in" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@poledancing.in</a></li>
+        <li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Anna Nagar, Chennai</a></li>
+        <li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Mon–Sun: 7AM–9PM</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Pole Dancing Studio. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="../assets/js/main.js"></script>
+<script>
+  function showTab(day, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(day).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

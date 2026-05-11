@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pole Dancing Studio Services — Explore pole, aerial silks, lyra, party packages, and online membership options." />
+  <title>Services & Classes — Pole Dancing Studio</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .filter-bar { display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem; }
+    .filter-btn { padding:.6rem 1.4rem;border:2px solid var(--border);border-radius:var(--radius-full);font-weight:600;font-size:.9rem;color:var(--text-secondary);transition:var(--transition-bounce);background:var(--bg-card); }
+    .filter-btn:hover,.filter-btn.active { background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px); }
+    .process-connector { display:none; }
+    @media(min-width:768px){
+      .steps-grid { position:relative; }
+      .steps-grid::before { content:'';position:absolute;top:30px;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent));z-index:0; }
+      .step-card { position:relative;z-index:1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="index.html" class="brand"><div class="brand-logo">🩰</div><span class="brand-name">Pole <span>Dancing</span></span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link active">Services</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL"><i class="fas fa-language"></i></button>
+      <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="index.html" class="nav-link">Home</a><a href="home2.html" class="nav-link">Home 2</a><a href="about.html" class="nav-link">About</a><a href="services.html" class="nav-link active">Services</a><a href="blog.html" class="nav-link">Blog</a><a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
+    <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Services</span></nav>
+  <h1>Our Classes &amp; Services</h1>
+  <p>Explore our full range of aerial classes, party packages, and membership options designed to transform your body and spirit.</p>
+</div>
+
+<!-- ══ SECTION 1: ALL CLASSES ══ -->
+<section class="section" aria-label="All classes">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">All Classes</span>
+      <h2 class="section-title">Find Your Perfect Fit</h2>
+      <p class="section-desc">Every class is taught by certified instructors with small group sizes for maximum personal attention.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All Classes</button>
+      <button class="filter-btn" data-filter="pole">Pole</button>
+      <button class="filter-btn" data-filter="silks">Silks</button>
+      <button class="filter-btn" data-filter="lyra">Lyra</button>
+      <button class="filter-btn" data-filter="conditioning">Conditioning</button>
+    </div>
+
+    <div class="classes-grid">
+      <div class="class-card animate-on-scroll delay-1" data-category="pole">
+        <div class="class-card-img"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Pole Basics" loading="lazy" /><span class="class-badge">Beginner</span></div>
+        <div class="class-card-body">
+          <h3>Pole Basics</h3>
+          <p>Learn foundational spins, holds and body waves. Perfect for complete beginners.</p>
+          <div class="class-meta"><span><i class="fas fa-clock"></i> 60 min</span><span><i class="fas fa-users"></i> Max 8</span><span><i class="fas fa-fire"></i> Low–Med</span></div>
+          <div class="class-level"><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+          <div class="class-footer"><span class="class-price">₹1,200 <span>/class</span></span><a href="register.html" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="class-card animate-on-scroll delay-2" data-category="pole">
+        <div class="class-card-img"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Pole Intermediate" loading="lazy" /><span class="class-badge">Intermediate</span></div>
+        <div class="class-card-body">
+          <h3>Pole Intermediate</h3>
+          <p>Inversions, climbs, and strength combos for students with 3+ months experience.</p>
+          <div class="class-meta"><span><i class="fas fa-clock"></i> 60 min</span><span><i class="fas fa-users"></i> Max 6</span><span><i class="fas fa-fire"></i> High</span></div>
+          <div class="class-level"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+          <div class="class-footer"><span class="class-price">₹1,400 <span>/class</span></span><a href="register.html" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="class-card animate-on-scroll delay-3" data-category="pole">
+        <div class="class-card-img"><img src="https://images.unsplash.com/photo-1601758124277-9eb8f823e6cb?w=600&q=80" alt="Exotic Pole" loading="lazy" /><span class="class-badge">Intermediate+</span></div>
+        <div class="class-card-body">
+          <h3>Exotic Pole Flow</h3>
+          <p>Sensual, floor-work heavy style combining dance and pole artistry.</p>
+          <div class="class-meta"><span><i class="fas fa-clock"></i> 75 min</span><span><i class="fas fa-users"></i> Max 8</span><span><i class="fas fa-fire"></i> Medium</span></div>
+          <div class="class-level"><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+          <div class="class-footer"><span class="class-price">₹1,400 <span>/class</span></span><a href="register.html" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="class-card animate-on-scroll delay-1" data-category="silks">
+        <div class="class-card-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Aerial Silks Intro" loading="lazy" /><span class="class-badge">Beginner</span></div>
+        <div class="class-card-body">
+          <h3>Aerial Silks Intro</h3>
+          <p>Your first steps into the world of aerial fabric — climbs, wraps, and drops.</p>
+          <div class="class-meta"><span><i class="fas fa-clock"></i> 75 min</span><span><i class="fas fa-users"></i> Max 6</span><span><i class="fas fa-fire"></i> Medium</span></div>
+          <div class="class-level"><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+          <div class="class-footer"><span class="class-price">₹1,400 <span>/class</span></span><a href="register.html" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="class-card animate-on-scroll delay-2" data-category="lyra">
+        <div class="class-card-img"><img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80" alt="Lyra Beginners" loading="lazy" /><span class="class-badge">Beginner</span></div>
+        <div class="class-card-body">
+          <h3>Lyra Beginners</h3>
+          <p>Mount, balance, and flow inside your first aerial hoop with expert spotting.</p>
+          <div class="class-meta"><span><i class="fas fa-clock"></i> 60 min</span><span><i class="fas fa-users"></i> Max 6</span><span><i class="fas fa-fire"></i> Medium</span></div>
+          <div class="class-level"><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+          <div class="class-footer"><span class="class-price">₹1,300 <span>/class</span></span><a href="register.html" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+      <div class="class-card animate-on-scroll delay-3" data-category="conditioning">
+        <div class="class-card-img"><img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=600&q=80" alt="Flexibility & Conditioning" loading="lazy" /><span class="class-badge">All Levels</span></div>
+        <div class="class-card-body">
+          <h3>Flexibility & Conditioning</h3>
+          <p>Build the strength and flexibility foundation needed for all aerial disciplines.</p>
+          <div class="class-meta"><span><i class="fas fa-clock"></i> 60 min</span><span><i class="fas fa-users"></i> Max 12</span><span><i class="fas fa-fire"></i> Low–Med</span></div>
+          <div class="class-level"><div class="level-dot filled"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div><div class="level-dot"></div></div>
+          <div class="class-footer"><span class="class-price">₹900 <span>/class</span></span><a href="register.html" class="btn btn-primary btn-sm">Book Now</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: HOW IT WORKS + PARTY PACKAGES ══ -->
+<section class="section bg-secondary-section" aria-label="How it works and packages">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Getting Started</span>
+      <h2 class="section-title">Your Journey in 4 Steps</h2>
+      <p class="section-desc">Starting aerial fitness has never been easier. Here's exactly what to expect.</p>
+    </div>
+    <div class="steps-grid" style="margin-bottom:5rem;">
+      <div class="step-card animate-on-scroll delay-1">
+        <div class="step-number">1</div>
+        <h3>Book Free Trial</h3>
+        <p>Register online and choose your first free class. No credit card required.</p>
+      </div>
+      <div class="step-card animate-on-scroll delay-2">
+        <div class="step-number">2</div>
+        <h3>Attend &amp; Experience</h3>
+        <p>Come in comfortable clothes, meet your coach, and discover aerial movement.</p>
+      </div>
+      <div class="step-card animate-on-scroll delay-3">
+        <div class="step-number">3</div>
+        <h3>Choose Your Plan</h3>
+        <p>Pick the membership or class pack that matches your goals and schedule.</p>
+      </div>
+      <div class="step-card animate-on-scroll delay-4">
+        <div class="step-number">4</div>
+        <h3>Grow &amp; Shine</h3>
+        <p>Train, progress, and perform. Join showcases and celebrate every milestone.</p>
+      </div>
+    </div>
+
+    <div class="text-center animate-on-scroll" style="margin-bottom:2.5rem;">
+      <span class="section-label">Party Packages</span>
+      <h2 class="section-title">Celebrate with Us</h2>
+      <p class="section-desc">Bachelorettes, birthdays, corporate events — our party packages create unforgettable aerial experiences.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card animate-on-scroll delay-1">
+        <span class="package-icon">🎀</span>
+        <h3 class="package-name">Sparkle Party</h3>
+        <div class="package-price"><sup>₹</sup>4,999<sub>/group</sub></div>
+        <p class="package-desc">Small celebrations up to 6 guests.</p>
+        <ul class="package-features">
+          <li><i class="fas fa-check"></i> 90-minute class</li>
+          <li><i class="fas fa-check"></i> Up to 6 guests</li>
+          <li><i class="fas fa-check"></i> Pole basics session</li>
+          <li><i class="fas fa-check"></i> Party decorations</li>
+          <li><i class="fas fa-check"></i> Photo time</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Enquire Now</a>
+      </div>
+      <div class="package-card featured animate-on-scroll delay-2">
+        <span class="package-badge">Most Popular</span>
+        <span class="package-icon">🥂</span>
+        <h3 class="package-name">Glamour Gala</h3>
+        <div class="package-price"><sup>₹</sup>8,999<sub>/group</sub></div>
+        <p class="package-desc">Ultimate party for up to 12 guests.</p>
+        <ul class="package-features">
+          <li><i class="fas fa-check"></i> 2-hour experience</li>
+          <li><i class="fas fa-check"></i> Up to 12 guests</li>
+          <li><i class="fas fa-check"></i> Pole + silks session</li>
+          <li><i class="fas fa-check"></i> Prosecco & canapes</li>
+          <li><i class="fas fa-check"></i> Professional photos</li>
+          <li><i class="fas fa-check"></i> Goodie bags</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book Package</a>
+      </div>
+      <div class="package-card animate-on-scroll delay-3">
+        <span class="package-icon">👑</span>
+        <h3 class="package-name">Royal Experience</h3>
+        <div class="package-price"><sup>₹</sup>14,999<sub>/group</sub></div>
+        <p class="package-desc">Premium full-day for up to 20 guests.</p>
+        <ul class="package-features">
+          <li><i class="fas fa-check"></i> 3-hour experience</li>
+          <li><i class="fas fa-check"></i> Up to 20 guests</li>
+          <li><i class="fas fa-check"></i> All apparatus access</li>
+          <li><i class="fas fa-check"></i> Full catering service</li>
+          <li><i class="fas fa-check"></i> Video + photography</li>
+          <li><i class="fas fa-check"></i> Custom costumes</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Enquire Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: MEMBERSHIP ══ -->
+<section class="section membership-section" aria-label="Membership">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Online Membership Signup</span>
+      <h2 class="section-title">Choose Your Membership</h2>
+      <p class="section-desc">Flexible plans to suit every lifestyle. Cancel or pause anytime.</p>
+    </div>
+    <div class="membership-grid">
+      <div class="membership-card animate-on-scroll delay-1">
+        <div class="membership-icon"><i class="fas fa-seedling"></i></div>
+        <h3 class="membership-name">Starter</h3>
+        <div class="membership-price">₹2,499</div>
+        <div class="membership-period">per month · billed monthly</div>
+        <ul class="membership-features">
+          <li><i class="fas fa-check"></i> 4 classes/month</li>
+          <li><i class="fas fa-check"></i> Single apparatus</li>
+          <li><i class="fas fa-check"></i> App access</li>
+          <li class="excluded"><i class="fas fa-times"></i> Open practice</li>
+          <li class="excluded"><i class="fas fa-times"></i> Guest passes</li>
+        </ul>
+        <a href="register.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Sign Up</a>
+      </div>
+      <div class="membership-card popular animate-on-scroll delay-2">
+        <span class="popular-badge">Most Popular</span>
+        <div class="membership-icon"><i class="fas fa-fire"></i></div>
+        <h3 class="membership-name">Studio</h3>
+        <div class="membership-price">₹4,999</div>
+        <div class="membership-period">per month · billed monthly</div>
+        <ul class="membership-features">
+          <li><i class="fas fa-check"></i> Unlimited classes</li>
+          <li><i class="fas fa-check"></i> All apparatus</li>
+          <li><i class="fas fa-check"></i> Open practice 2×/wk</li>
+          <li><i class="fas fa-check"></i> 2 guest passes</li>
+          <li class="excluded"><i class="fas fa-times"></i> Workshop discounts</li>
+        </ul>
+        <a href="register.html" class="btn btn-primary" style="width:100%;justify-content:center;">Join Now</a>
+      </div>
+      <div class="membership-card animate-on-scroll delay-3">
+        <div class="membership-icon"><i class="fas fa-crown"></i></div>
+        <h3 class="membership-name">Elite</h3>
+        <div class="membership-price">₹7,999</div>
+        <div class="membership-period">per month · billed monthly</div>
+        <ul class="membership-features">
+          <li><i class="fas fa-check"></i> Unlimited classes</li>
+          <li><i class="fas fa-check"></i> All apparatus</li>
+          <li><i class="fas fa-check"></i> Unlimited open practice</li>
+          <li><i class="fas fa-check"></i> 4 guest passes</li>
+          <li><i class="fas fa-check"></i> 20% workshop discount</li>
+        </ul>
+        <a href="register.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Go Elite</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner"><div class="container">
+  <span class="section-label" style="color:var(--accent)">First Class Free</span>
+  <h2>Still Not Sure? Try Before You Buy</h2>
+  <p>Book your free trial class today and experience the magic for yourself. No commitment needed.</p>
+  <div class="cta-actions"><a href="register.html" class="btn btn-accent btn-lg"><i class="fas fa-play-circle"></i> Book Free Trial</a><a href="contact.html" class="btn btn-ghost btn-lg"><i class="fas fa-question-circle"></i> Ask a Question</a></div>
+</div></section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-brand-logo"><div class="brand-logo">🩰</div><div><div class="footer-brand-name">Pole Dancing</div><div class="footer-brand-tagline">Aerial Fitness Studio</div></div></div><p class="footer-desc">Empowering bodies and spirits through the art of aerial movement.</p><div class="social-links"><a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
+    <div><h4 class="footer-heading">Quick Links</h4><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="services.html" class="footer-link">Services</a></li><li><a href="blog.html" class="footer-link">Blog</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+    <div><h4 class="footer-heading">Classes</h4><ul class="footer-links"><li><a href="services.html" class="footer-link">Pole Fitness</a></li><li><a href="services.html" class="footer-link">Aerial Silks</a></li><li><a href="services.html" class="footer-link">Lyra/Hoop</a></li><li><a href="services.html" class="footer-link">Flexibility</a></li><li><a href="services.html" class="footer-link">Youth Classes</a></li></ul></div>
+    <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+919876543210" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +91 98765 43210</a></li><li><a href="mailto:hello@poledancing.in" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@poledancing.in</a></li><li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Anna Nagar, Chennai</a></li><li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Mon–Sun: 7AM–9PM</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 Pole Dancing Studio. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

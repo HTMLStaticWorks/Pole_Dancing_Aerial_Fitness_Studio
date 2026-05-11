@@ -1,0 +1,83 @@
+/* ============================================================
+   RTL SUPPORT — POLE DANCING STUDIO
+   ============================================================ */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Header */
+[dir="rtl"] .nav-container { flex-direction: row-reverse; }
+[dir="rtl"] .brand { flex-direction: row-reverse; }
+[dir="rtl"] .nav-actions { flex-direction: row-reverse; }
+[dir="rtl"] .nav-menu { left: unset; right: 50%; transform: translateX(50%); }
+[dir="rtl"] .mobile-close { right: unset; left: 1.5rem; }
+
+/* Cards */
+[dir="rtl"] .feature-card { text-align: right; }
+[dir="rtl"] .feature-icon { margin-right: 0; }
+[dir="rtl"] .class-badge { left: unset; right: 1rem; }
+[dir="rtl"] .blog-category { left: unset; right: 1rem; }
+[dir="rtl"] .package-badge { right: unset; left: 2rem; }
+[dir="rtl"] .popular-badge { left: 50%; transform: translateX(50%); right: unset; transform: translateX(-50%); }
+
+/* Footer */
+[dir="rtl"] .footer-grid { direction: rtl; }
+[dir="rtl"] .footer-heading::after { left: unset; right: 0; }
+[dir="rtl"] .footer-link::before { display: none; }
+[dir="rtl"] .footer-link:hover { padding-left: 0; padding-right: 8px; }
+
+/* Contact */
+[dir="rtl"] .contact-item { flex-direction: row-reverse; }
+[dir="rtl"] .contact-item:hover { transform: translateX(-5px); }
+
+/* Testimonial */
+[dir="rtl"] .testimonial-card::before { right: unset; left: 1.5rem; }
+[dir="rtl"] .testimonial-author { flex-direction: row-reverse; }
+
+/* Steps */
+[dir="rtl"] .steps-grid { direction: rtl; }
+
+/* Team social */
+[dir="rtl"] .team-social { flex-direction: row-reverse; }
+
+/* FAQ */
+[dir="rtl"] .faq-question { flex-direction: row-reverse; }
+
+/* Form */
+[dir="rtl"] .form-group label { text-align: right; }
+[dir="rtl"] .checkbox-group { flex-direction: row-reverse; }
+[dir="rtl"] .auth-logo { flex-direction: row-reverse; }
+
+/* Breadcrumb */
+[dir="rtl"] .breadcrumb { flex-direction: row-reverse; }
+
+/* Membership features */
+[dir="rtl"] .membership-features li,
+[dir="rtl"] .package-features li { flex-direction: row-reverse; }
+
+/* Hero */
+[dir="rtl"] .hero-actions { flex-direction: row-reverse; }
+[dir="rtl"] .hero-stats { flex-direction: row-reverse; }
+[dir="rtl"] .hero-badge { flex-direction: row-reverse; }
+
+/* Blog meta */
+[dir="rtl"] .blog-meta { flex-direction: row-reverse; }
+[dir="rtl"] .class-meta { flex-direction: row-reverse; }
+[dir="rtl"] .class-footer { flex-direction: row-reverse; }
+
+/* Nav active underline */
+[dir="rtl"] .nav-link::after { left: 10%; right: 10%; }
+
+/* Animations reverse */
+@keyframes fadeInLeftRTL { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeInRightRTL { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
+
+/* Table */
+[dir="rtl"] .schedule-table th,
+[dir="rtl"] .schedule-table td { text-align: right; }
+
+/* Footer bottom */
+[dir="rtl"] .footer-bottom { flex-direction: row-reverse; }
+[dir="rtl"] .footer-bottom-links { flex-direction: row-reverse; }

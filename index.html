@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pole Dancing & Aerial Fitness Studio — Transform your strength, grace, and confidence. Classes in pole, silks, lyra & more." />
+  <meta name="keywords" content="pole dancing, aerial fitness, silks, lyra, hoop, aerial arts, dance studio" />
+  <title>Pole Dancing Studio — Home</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <!-- Brand -->
+    <a href="index.html" class="brand">
+      <div class="brand-logo">🩰</div>
+      <span class="brand-name">Pole <span>Dancing</span></span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Desktop Actions -->
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL">
+        <i class="fas fa-language"></i>
+      </button>
+      <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme">
+        <i class="theme-toggle-icon fas fa-moon"></i>
+      </button>
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    </div>
+
+    <!-- Hamburger (mobile) -->
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="index.html" class="nav-link active">Home</a>
+  <a href="home2.html" class="nav-link">Home 2</a>
+  <a href="about.html" class="nav-link">About</a>
+  <a href="services.html" class="nav-link">Services</a>
+  <a href="blog.html" class="nav-link">Blog</a>
+  <a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
+    <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: HERO ══ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1600&q=80" alt="Aerial performer" loading="eager" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-particles"></div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        <span>Award-Winning Aerial Fitness Studio</span>
+      </div>
+      <h1 class="hero-title">
+        Elevate Your Body,
+        <span class="accent-text">Free Your Soul</span>
+      </h1>
+      <p class="hero-desc">
+        Discover the art of pole dancing, aerial silks, and lyra. Professional coaching for all levels — from curious beginners to advanced artists.
+      </p>
+      <div class="hero-actions">
+        <a href="register.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-play-circle"></i> Start Your Journey
+        </a>
+        <a href="services.html" class="btn btn-ghost btn-lg">
+          <i class="fas fa-compass"></i> Explore Classes
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-number"><span data-counter data-target="500" data-suffix="+">500+</span></span>
+          <span class="hero-stat-label">Students</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number"><span data-counter data-target="12" data-suffix="+">12+</span></span>
+          <span class="hero-stat-label">Class Types</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number"><span data-counter data-target="8" data-suffix="">8</span></span>
+          <span class="hero-stat-label">Instructors</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number"><span data-counter data-target="5" data-suffix="★">5★</span></span>
+          <span class="hero-stat-label">Rating</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: FEATURES ══ -->
+<section class="section bg-secondary-section" aria-label="Why choose us">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title">Strength Meets <em>Elegance</em></h2>
+      <p class="section-desc">Our studio blends athletic training with artistic expression, creating an experience unlike any other fitness class.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card animate-on-scroll delay-1">
+        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+        <h3>Certified Instructors</h3>
+        <p>Every coach holds professional aerial & fitness certifications with years of performance experience.</p>
+      </div>
+      <div class="feature-card animate-on-scroll delay-2">
+        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>All Skill Levels</h3>
+        <p>Beginner-friendly classes through advanced training — find exactly where you belong on your journey.</p>
+      </div>
+      <div class="feature-card animate-on-scroll delay-3">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Safety First</h3>
+        <p>Premium rigging, crash mats, and spotting techniques ensure a safe environment for every student.</p>
+      </div>
+      <div class="feature-card animate-on-scroll delay-4">
+        <div class="feature-icon"><i class="fas fa-users"></i></div>
+        <h3>Community Spirit</h3>
+        <p>Join a welcoming, body-positive community that celebrates every step of your aerial adventure.</p>
+      </div>
+      <div class="feature-card animate-on-scroll delay-5">
+        <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+        <h3>Flexible Scheduling</h3>
+        <p>Morning, evening, and weekend classes designed to fit seamlessly into your busy lifestyle.</p>
+      </div>
+      <div class="feature-card animate-on-scroll delay-1">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Online Booking</h3>
+        <p>Reserve your spot in any class with our easy online membership and booking system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: CLASSES ══ -->
+<section class="section" aria-label="Featured classes">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Our Classes</span>
+      <h2 class="section-title">Find Your Perfect Class</h2>
+      <p class="section-desc">From graceful silks to empowering pole, every apparatus offers a unique path to strength and artistry.</p>
+    </div>
+    <div class="classes-grid">
+      <div class="class-card animate-on-scroll delay-1">
+        <div class="class-card-img">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Pole Dancing class" loading="lazy" />
+          <span class="class-badge">Bestseller</span>
+        </div>
+        <div class="class-card-body">
+          <h3>Pole Fitness</h3>
+          <p>Master spins, climbs, and inversions while building incredible upper body and core strength.</p>
+          <div class="class-meta">
+            <span><i class="fas fa-clock"></i> 60 min</span>
+            <span><i class="fas fa-users"></i> Max 8</span>
+            <span><i class="fas fa-fire"></i> High intensity</span>
+          </div>
+          <div class="class-level">
+            <div class="level-dot filled"></div>
+            <div class="level-dot filled"></div>
+            <div class="level-dot"></div>
+            <div class="level-dot"></div>
+            <div class="level-dot"></div>
+          </div>
+          <div class="class-footer">
+            <span class="class-price">₹1,200 <span>/class</span></span>
+            <a href="services.html" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="class-card animate-on-scroll delay-2">
+        <div class="class-card-img">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Aerial Silks" loading="lazy" />
+          <span class="class-badge">Popular</span>
+        </div>
+        <div class="class-card-body">
+          <h3>Aerial Silks</h3>
+          <p>Flow through the air on stunning fabric. Develop flexibility, coordination and breathtaking artistry.</p>
+          <div class="class-meta">
+            <span><i class="fas fa-clock"></i> 75 min</span>
+            <span><i class="fas fa-users"></i> Max 6</span>
+            <span><i class="fas fa-fire"></i> Medium</span>
+          </div>
+          <div class="class-level">
+            <div class="level-dot filled"></div>
+            <div class="level-dot filled"></div>
+            <div class="level-dot filled"></div>
+            <div class="level-dot"></div>
+            <div class="level-dot"></div>
+          </div>
+          <div class="class-footer">
+            <span class="class-price">₹1,400 <span>/class</span></span>
+            <a href="services.html" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="class-card animate-on-scroll delay-3">
+        <div class="class-card-img">
+          <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80" alt="Lyra Hoop" loading="lazy" />
+          <span class="class-badge">New</span>
+        </div>
+        <div class="class-card-body">
+          <h3>Lyra / Aerial Hoop</h3>
+          <p>Dance within a suspended steel hoop. Combines strength, grace and breathtaking visual artistry.</p>
+          <div class="class-meta">
+            <span><i class="fas fa-clock"></i> 60 min</span>
+            <span><i class="fas fa-users"></i> Max 6</span>
+            <span><i class="fas fa-fire"></i> Medium</span>
+          </div>
+          <div class="class-level">
+            <div class="level-dot filled"></div>
+            <div class="level-dot"></div>
+            <div class="level-dot"></div>
+            <div class="level-dot"></div>
+            <div class="level-dot"></div>
+          </div>
+          <div class="class-footer">
+            <span class="class-price">₹1,300 <span>/class</span></span>
+            <a href="services.html" class="btn btn-primary btn-sm">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:3rem;">
+      <a href="services.html" class="btn btn-secondary btn-lg">View All Classes <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: STUDENT SHOWCASE / GALLERY ══ -->
+<section class="section bg-secondary-section" aria-label="Student showcase">
+  <div class="container-lg">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Student Showcase</span>
+      <h2 class="section-title">Our Stars in Action</h2>
+      <p class="section-desc">Every body is a showcase body. Witness the incredible journeys of our students from first class to full performance.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;">
+      <button class="btn btn-primary btn-sm" data-filter="all">All</button>
+      <button class="btn btn-secondary btn-sm" data-filter="pole">Pole</button>
+      <button class="btn btn-secondary btn-sm" data-filter="silks">Silks</button>
+      <button class="btn btn-secondary btn-sm" data-filter="lyra">Lyra</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item tall" data-category="pole">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80" alt="Pole performer" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" data-category="silks">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80" alt="Aerial silks" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" data-category="lyra">
+        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=500&q=80" alt="Lyra hoop" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item wide" data-category="pole">
+        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80" alt="Pole fitness" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" data-category="silks">
+        <img src="https://images.unsplash.com/photo-1601758124277-9eb8f823e6cb?w=500&q=80" alt="Aerial arts" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" data-category="lyra">
+        <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=500&q=80" alt="Dance performance" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: PARTY PACKAGES ══ -->
+<section class="section" aria-label="Party packages">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Party Packages</span>
+      <h2 class="section-title">Celebrate in Style</h2>
+      <p class="section-desc">Bachelorette parties, birthdays, corporate team-building — we have the perfect aerial party package for every occasion.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card animate-on-scroll delay-1">
+        <span class="package-icon">🎀</span>
+        <h3 class="package-name">Sparkle Party</h3>
+        <div class="package-price"><sup>₹</sup>4,999<sub>/group</sub></div>
+        <p class="package-desc">Perfect for small celebrations up to 6 guests.</p>
+        <ul class="package-features">
+          <li><i class="fas fa-check"></i> 90-minute class</li>
+          <li><i class="fas fa-check"></i> Up to 6 guests</li>
+          <li><i class="fas fa-check"></i> Pole basics session</li>
+          <li><i class="fas fa-check"></i> Party decorations</li>
+          <li><i class="fas fa-check"></i> Photo time</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Book Package</a>
+      </div>
+      <div class="package-card featured animate-on-scroll delay-2">
+        <span class="package-badge">Most Popular</span>
+        <span class="package-icon">🥂</span>
+        <h3 class="package-name">Glamour Gala</h3>
+        <div class="package-price"><sup>₹</sup>8,999<sub>/group</sub></div>
+        <p class="package-desc">The ultimate party experience for up to 12 guests.</p>
+        <ul class="package-features">
+          <li><i class="fas fa-check"></i> 2-hour experience</li>
+          <li><i class="fas fa-check"></i> Up to 12 guests</li>
+          <li><i class="fas fa-check"></i> Pole + silks session</li>
+          <li><i class="fas fa-check"></i> Prosecco & canapes</li>
+          <li><i class="fas fa-check"></i> Professional photos</li>
+          <li><i class="fas fa-check"></i> Goodie bags</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book Package</a>
+      </div>
+      <div class="package-card animate-on-scroll delay-3">
+        <span class="package-icon">👑</span>
+        <h3 class="package-name">Royal Experience</h3>
+        <div class="package-price"><sup>₹</sup>14,999<sub>/group</sub></div>
+        <p class="package-desc">Premium full-day event for up to 20 guests.</p>
+        <ul class="package-features">
+          <li><i class="fas fa-check"></i> 3-hour experience</li>
+          <li><i class="fas fa-check"></i> Up to 20 guests</li>
+          <li><i class="fas fa-check"></i> All apparatus access</li>
+          <li><i class="fas fa-check"></i> Full catering service</li>
+          <li><i class="fas fa-check"></i> Video + photography</li>
+          <li><i class="fas fa-check"></i> Custom costumes</li>
+        </ul>
+        <a href="contact.html" class="btn btn-secondary" style="width:100%;justify-content:center;">Book Package</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 6: TESTIMONIALS + CTA ══ -->
+<section class="section bg-secondary-section" aria-label="Testimonials">
+  <div class="container">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Student Stories</span>
+      <h2 class="section-title">What Our Students Say</h2>
+      <p class="section-desc">Real transformations, real confidence, real joy — hear from the people who make our studio come alive.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card animate-on-scroll delay-1">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testimonial-text">"I never thought I could do pole dancing, but the instructors here made me feel so welcome. Six months in and I'm doing inverts I never dreamed possible!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Priya" loading="lazy" /></div>
+          <div>
+            <div class="testimonial-name">Priya Sharma</div>
+            <div class="testimonial-role">Pole Student, 6 months</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll delay-2">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="testimonial-text">"The aerial silks class completely changed my life. I've lost weight, gained confidence, and found my tribe. Absolutely the best investment I've made in myself."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Meera" loading="lazy" /></div>
+          <div>
+            <div class="testimonial-name">Meera Nair</div>
+            <div class="testimonial-role">Aerial Silks, 1 year</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card animate-on-scroll delay-3">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+        <p class="testimonial-text">"Booked the Glamour Gala for my bachelorette party and it was absolutely magical. Every guest had the time of their life. Highly recommend!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80" alt="Anjali" loading="lazy" /></div>
+          <div>
+            <div class="testimonial-name">Anjali Reddy</div>
+            <div class="testimonial-role">Party Booking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner" aria-label="Call to action">
+  <div class="container">
+    <span class="section-label" style="color:var(--accent);">Ready to Begin?</span>
+    <h2>Your First Class is on Us</h2>
+    <p>Sign up for a free trial class and discover what aerial fitness can do for your body and soul. No experience necessary.</p>
+    <div class="cta-actions">
+      <a href="register.html" class="btn btn-accent btn-lg"><i class="fas fa-gift"></i> Claim Free Trial</a>
+      <a href="contact.html" class="btn btn-ghost btn-lg"><i class="fas fa-phone"></i> Call Us Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer" aria-label="Site footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo">
+        <div class="brand-logo">🩰</div>
+        <div>
+          <div class="footer-brand-name">Pole Dancing</div>
+          <div class="footer-brand-tagline">Aerial Fitness Studio</div>
+        </div>
+      </div>
+      <p class="footer-desc">Empowering bodies and spirits through the art of aerial movement. Join our community and discover your strength.</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html" class="footer-link">Home</a></li>
+        <li><a href="about.html" class="footer-link">About Us</a></li>
+        <li><a href="services.html" class="footer-link">Classes</a></li>
+        <li><a href="blog.html" class="footer-link">Blog</a></li>
+        <li><a href="contact.html" class="footer-link">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Our Classes</h4>
+      <ul class="footer-links">
+        <li><a href="services.html" class="footer-link">Pole Fitness</a></li>
+        <li><a href="services.html" class="footer-link">Aerial Silks</a></li>
+        <li><a href="services.html" class="footer-link">Lyra / Hoop</a></li>
+        <li><a href="services.html" class="footer-link">Flexibility</a></li>
+        <li><a href="services.html" class="footer-link">Kids Classes</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="footer-heading">Contact Us</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+919876543210" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +91 98765 43210</a></li>
+        <li><a href="mailto:hello@poledancing.in" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@poledancing.in</a></li>
+        <li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Anna Nagar, Chennai</a></li>
+        <li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Mon–Sun: 7AM–9PM</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Pole Dancing Studio. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

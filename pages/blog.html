@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pole Dancing Studio Blog — Tips, inspiration, student stories, and aerial fitness guides." />
+  <title>Blog — Pole Dancing Studio</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .blog-filter { display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem; }
+    .blog-filter-btn { padding:.5rem 1.3rem;border:2px solid var(--border);border-radius:var(--radius-full);font-weight:600;font-size:.85rem;color:var(--text-secondary);transition:var(--transition-bounce);background:var(--bg-card); }
+    .blog-filter-btn:hover,.blog-filter-btn.active { background:var(--primary);border-color:var(--primary);color:#fff;transform:translateY(-2px); }
+    .featured-post { display:grid;grid-template-columns:1fr;gap:2rem;margin-bottom:4rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden; }
+    @media(min-width:768px){ .featured-post { grid-template-columns:1.5fr 1fr; } }
+    .featured-post-img { height:320px;overflow:hidden; }
+    @media(min-width:768px){ .featured-post-img { height:100%; } }
+    .featured-post-img img { width:100%;height:100%;object-fit:cover;transition:transform .5s ease; }
+    .featured-post:hover .featured-post-img img { transform:scale(1.05); }
+    .featured-post-body { padding:2.5rem;display:flex;flex-direction:column;justify-content:center; }
+    .sidebar-card { background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.75rem;margin-bottom:1.5rem; }
+    .sidebar-card h4 { margin-bottom:1.25rem;font-size:1.1rem; }
+    .recent-post { display:flex;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--border);transition:var(--transition); }
+    .recent-post:last-child { border-bottom:none; }
+    .recent-post:hover { padding-left:.5rem; }
+    .recent-post-img { width:64px;height:64px;border-radius:var(--radius-sm);overflow:hidden;flex-shrink:0; }
+    .recent-post-img img { width:100%;height:100%;object-fit:cover; }
+    .recent-post-title { font-weight:600;font-size:.88rem;margin-bottom:.3rem;transition:var(--transition); }
+    .recent-post:hover .recent-post-title { color:var(--primary); }
+    .recent-post-date { font-size:.78rem;color:var(--text-light); }
+    .tags { display:flex;flex-wrap:wrap;gap:.5rem; }
+    .tag-pill { padding:.3rem .9rem;background:var(--bg-secondary);border:1px solid var(--border);border-radius:var(--radius-full);font-size:.8rem;color:var(--text-secondary);transition:var(--transition-bounce);cursor:pointer; }
+    .tag-pill:hover { background:var(--primary);border-color:var(--primary);color:#fff;transform:scale(1.05); }
+    .main-blog-grid { display:grid;grid-template-columns:1fr;gap:3rem; }
+    @media(min-width:1024px){ .main-blog-grid { grid-template-columns:2fr 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <nav class="nav-container">
+    <a href="index.html" class="brand"><div class="brand-logo">🩰</div><span class="brand-name">Pole <span>Dancing</span></span></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="home2.html" class="nav-link">Home 2</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="blog.html" class="nav-link active">Blog</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL"><i class="fas fa-language"></i></button>
+      <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
+      <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<div class="mobile-menu" role="dialog" aria-modal="true">
+  <button class="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+  <a href="index.html" class="nav-link">Home</a><a href="home2.html" class="nav-link">Home 2</a><a href="about.html" class="nav-link">About</a><a href="services.html" class="nav-link">Services</a><a href="blog.html" class="nav-link active">Blog</a><a href="contact.html" class="nav-link">Contact</a>
+  <div class="mobile-menu-actions">
+    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
+    <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+</div>
+
+<div class="page-header">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Blog</span></nav>
+  <h1>Aerial Insights</h1>
+  <p>Tips, tutorials, student stories, and everything aerial — straight from our studio to your screen.</p>
+</div>
+
+<!-- ══ SECTION 1: FEATURED POST ══ -->
+<section class="section" aria-label="Featured post">
+  <div class="container">
+    <div class="text-center animate-on-scroll" style="margin-bottom:2rem;">
+      <span class="section-label">Featured Story</span>
+      <h2 class="section-title">This Week's Highlight</h2>
+    </div>
+    <div class="featured-post animate-on-scroll">
+      <div class="featured-post-img">
+        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=80" alt="Featured blog post" loading="lazy" />
+      </div>
+      <div class="featured-post-body">
+        <span class="blog-category" style="position:static;display:inline-block;margin-bottom:1rem;">Student Stories</span>
+        <h2 style="font-size:1.8rem;margin-bottom:1rem;">How Aerial Silks Changed My Life in 6 Months</h2>
+        <div class="blog-meta" style="margin-bottom:1rem;">
+          <span><i class="fas fa-user"></i> Meera Nair</span>
+          <span><i class="fas fa-calendar"></i> Dec 10, 2024</span>
+          <span><i class="fas fa-clock"></i> 8 min read</span>
+        </div>
+        <p style="margin-bottom:2rem;">"I walked into the studio terrified. I hadn't exercised in three years, I was scared of heights, and I genuinely believed I had zero upper body strength. Six months later, I can climb, wrap, and drop…"</p>
+        <a href="#" class="btn btn-primary">Read Full Story <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: BLOG GRID + SIDEBAR ══ -->
+<section class="section bg-secondary-section" aria-label="Blog posts">
+  <div class="container">
+    <div class="text-center animate-on-scroll" style="margin-bottom:2rem;">
+      <span class="section-label">All Articles</span>
+      <h2 class="section-title">Latest From the Studio</h2>
+    </div>
+    <div class="blog-filter">
+      <button class="blog-filter-btn active" data-filter="all">All</button>
+      <button class="blog-filter-btn" data-filter="tips">Tips & Tricks</button>
+      <button class="blog-filter-btn" data-filter="stories">Student Stories</button>
+      <button class="blog-filter-btn" data-filter="nutrition">Nutrition</button>
+      <button class="blog-filter-btn" data-filter="events">Events</button>
+    </div>
+
+    <div class="main-blog-grid">
+      <!-- Posts -->
+      <div>
+        <div class="blog-grid">
+          <div class="blog-card animate-on-scroll delay-1" data-category="tips">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Pole tips" loading="lazy" /><span class="blog-category">Tips & Tricks</span></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Dec 5, 2024</span><span><i class="fas fa-clock"></i> 5 min</span></div>
+              <h3>5 Pole Grip Tips Every Beginner Needs to Know</h3>
+              <p>Struggling with slipping on the pole? These essential grip techniques will transform your practice from day one.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate-on-scroll delay-2" data-category="nutrition">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&q=80" alt="Nutrition for aerial" loading="lazy" /><span class="blog-category">Nutrition</span></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 28, 2024</span><span><i class="fas fa-clock"></i> 6 min</span></div>
+              <h3>What to Eat Before Your Aerial Class (And What to Avoid)</h3>
+              <p>Your pre-class nutrition can make or break your performance. Here's our coach-approved guide to fuelling for flight.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate-on-scroll delay-1" data-category="stories">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80" alt="Student showcase" loading="lazy" /><span class="blog-category">Student Stories</span></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 20, 2024</span><span><i class="fas fa-clock"></i> 4 min</span></div>
+              <h3>From Zero to Showcase: Priya's 1-Year Transformation</h3>
+              <p>One year ago Priya couldn't do a single pull-up. Today she performed at our winter showcase to a standing ovation.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="blog-card animate-on-scroll delay-2" data-category="events">
+            <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1601758124277-9eb8f823e6cb?w=600&q=80" alt="Studio event" loading="lazy" /><span class="blog-category">Events</span></div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span><i class="fas fa-calendar"></i> Nov 12, 2024</span><span><i class="fas fa-clock"></i> 3 min</span></div>
+              <h3>Annual Showcase 2024 Highlights & Recap</h3>
+              <p>Over 200 guests, 30 performances, and one unforgettable night. Relive the magic of our biggest showcase yet.</p>
+              <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem;">
+          <a href="#" class="btn btn-secondary btn-lg">Load More Articles <i class="fas fa-chevron-down"></i></a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside>
+        <div class="sidebar-card animate-on-scroll">
+          <h4>Search</h4>
+          <div style="position:relative;">
+            <input type="search" class="form-control" placeholder="Search articles..." aria-label="Search articles" />
+            <button style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:var(--primary);" aria-label="Search"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="sidebar-card animate-on-scroll delay-1">
+          <h4>Recent Posts</h4>
+          <div class="recent-post"><div class="recent-post-img"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=200&q=80" alt="Recent post" loading="lazy" /></div><div><div class="recent-post-title">5 Pole Grip Tips for Beginners</div><div class="recent-post-date">Dec 5, 2024</div></div></div>
+          <div class="recent-post"><div class="recent-post-img"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=200&q=80" alt="Recent post" loading="lazy" /></div><div><div class="recent-post-title">What to Eat Before Aerial Class</div><div class="recent-post-date">Nov 28, 2024</div></div></div>
+          <div class="recent-post"><div class="recent-post-img"><img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=200&q=80" alt="Recent post" loading="lazy" /></div><div><div class="recent-post-title">Priya's 1-Year Transformation</div><div class="recent-post-date">Nov 20, 2024</div></div></div>
+        </div>
+        <div class="sidebar-card animate-on-scroll delay-2">
+          <h4>Popular Tags</h4>
+          <div class="tags">
+            <span class="tag-pill">Pole Fitness</span><span class="tag-pill">Aerial Silks</span><span class="tag-pill">Beginners</span><span class="tag-pill">Strength</span><span class="tag-pill">Flexibility</span><span class="tag-pill">Nutrition</span><span class="tag-pill">Showcase</span><span class="tag-pill">Lyra</span><span class="tag-pill">Party</span>
+          </div>
+        </div>
+        <div class="sidebar-card animate-on-scroll delay-3" style="background:linear-gradient(135deg,var(--primary),var(--primary-light));border-color:transparent;">
+          <h4 style="color:#fff;margin-bottom:.75rem;">Free Trial Class</h4>
+          <p style="color:rgba(255,255,255,.85);font-size:.9rem;margin-bottom:1.25rem;">Ready to experience aerial fitness for yourself? Your first class is completely free!</p>
+          <a href="register.html" class="btn btn-white btn-sm" style="width:100%;justify-content:center;">Book Free Trial</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: NEWSLETTER ══ -->
+<section class="section" aria-label="Newsletter">
+  <div class="container" style="max-width:700px;">
+    <div class="text-center animate-on-scroll">
+      <span class="section-label">Stay in the Loop</span>
+      <h2 class="section-title">Get Studio Updates</h2>
+      <p class="section-desc">New class announcements, student spotlights, exclusive offers, and aerial tips — delivered to your inbox weekly.</p>
+      <form data-validate-form style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem;">
+        <input type="email" class="form-control" placeholder="Enter your email address" data-validate="required,email" style="max-width:320px;" aria-label="Email address" />
+        <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Subscribe Free</button>
+      </form>
+      <p style="margin-top:1rem;font-size:.82rem;color:var(--text-light);">No spam, ever. Unsubscribe anytime. 🔒</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner"><div class="container">
+  <span class="section-label" style="color:var(--accent)">Take Action</span>
+  <h2>Reading About It is Not Enough</h2>
+  <p>Experience aerial fitness in person. Your first class is completely free — no excuses!</p>
+  <div class="cta-actions"><a href="register.html" class="btn btn-accent btn-lg"><i class="fas fa-bolt"></i> Start Today</a><a href="services.html" class="btn btn-ghost btn-lg"><i class="fas fa-compass"></i> See All Classes</a></div>
+</div></section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="footer-brand-logo"><div class="brand-logo">🩰</div><div><div class="footer-brand-name">Pole Dancing</div><div class="footer-brand-tagline">Aerial Fitness Studio</div></div></div><p class="footer-desc">Empowering bodies and spirits through the art of aerial movement.</p><div class="social-links"><a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a><a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a></div></div>
+    <div><h4 class="footer-heading">Quick Links</h4><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="services.html" class="footer-link">Services</a></li><li><a href="blog.html" class="footer-link">Blog</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+    <div><h4 class="footer-heading">Classes</h4><ul class="footer-links"><li><a href="services.html" class="footer-link">Pole Fitness</a></li><li><a href="services.html" class="footer-link">Aerial Silks</a></li><li><a href="services.html" class="footer-link">Lyra/Hoop</a></li><li><a href="services.html" class="footer-link">Flexibility</a></li><li><a href="services.html" class="footer-link">Youth Classes</a></li></ul></div>
+    <div><h4 class="footer-heading">Contact</h4><ul class="footer-links"><li><a href="tel:+919876543210" class="footer-link"><i class="fas fa-phone" style="width:16px;color:var(--accent)"></i> +91 98765 43210</a></li><li><a href="mailto:hello@poledancing.in" class="footer-link"><i class="fas fa-envelope" style="width:16px;color:var(--accent)"></i> hello@poledancing.in</a></li><li><a href="#" class="footer-link"><i class="fas fa-map-marker-alt" style="width:16px;color:var(--accent)"></i> Anna Nagar, Chennai</a></li><li><a href="#" class="footer-link"><i class="fas fa-clock" style="width:16px;color:var(--accent)"></i> Mon–Sun: 7AM–9PM</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 Pole Dancing Studio. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div></div>
+</footer>
+<button class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
