@@ -19,10 +19,11 @@
       overflow: hidden;
     }
     @media(min-width:1024px){ .hero2 { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:1023px){ .hero2 { margin-bottom: 3.5rem; } }
     .hero2-content {
       background: linear-gradient(135deg, var(--secondary) 0%, #2d1b3d 100%);
       display: flex; flex-direction: column; justify-content: center;
-      padding: calc(var(--nav-height) + 3rem) 3rem 4rem;
+      padding: calc(var(--nav-height) + 4.5rem) 3rem 5.5rem;
       position: relative; z-index: 1;
     }
     .hero2-image {
@@ -86,7 +87,7 @@
       <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL"><i class="fas fa-language"></i></button>
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 800;">RTL</button>
       <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
       <a href="login.html" class="btn btn-primary btn-sm">Login</a>
     </div>
@@ -103,7 +104,7 @@
   <a href="blog.html" class="nav-link">Blog</a>
   <a href="contact.html" class="nav-link">Contact</a>
   <div class="mobile-menu-actions">
-    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
+    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()" style="font-weight: 800;">RTL</button>
     <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
     <a href="login.html" class="btn btn-primary">Login</a>
   </div>
@@ -111,37 +112,31 @@
 
 <!-- ══ SECTION 1: SPLIT HERO ══ -->
 <section class="hero2" aria-label="Hero alternate">
-  <div class="hero2-content">
-    <div class="hero-badge" style="align-self:flex-start;margin-bottom:1.5rem;">
+  <div class="hero2-content" style="align-items:center;text-align:center;">
+    <div class="hero-badge" style="align-self:center;margin-bottom:1.5rem;">
       <i class="fas fa-award"></i> <span>India's #1 Aerial Studio</span>
     </div>
-    <h1 style="color:#fff;margin-bottom:1.5rem;">
+    <h1 style="color:#fff;margin-bottom:1.5rem;text-align:center;">
       Where <span style="color:var(--accent);font-family:var(--font-script)">Strength</span> Becomes Art
     </h1>
-    <p style="color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:2rem;max-width:480px;">
+    <p style="color:rgba(255,255,255,.8);font-size:1.1rem;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;text-align:center;">
       Unlock your potential through pole, silks, and lyra. Expert coaching, vibrant community, transformative results.
     </p>
-    <div class="hero-actions" style="margin-bottom:3rem;">
+    <div class="hero-actions" style="margin-bottom:3rem;justify-content:center;">
       <a href="register.html" class="btn btn-primary btn-lg"><i class="fas fa-user-plus"></i> Join Now — Free Trial</a>
       <a href="#schedule" class="btn btn-ghost btn-lg"><i class="fas fa-calendar"></i> See Schedule</a>
     </div>
     <!-- Mini stats -->
-    <div style="display:flex;gap:2rem;flex-wrap:wrap;">
+    <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;text-align:center;">
       <div><div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--accent)">500+</div><div style="color:rgba(255,255,255,.6);font-size:.85rem;">Happy Students</div></div>
       <div><div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--accent)">12</div><div style="color:rgba(255,255,255,.6);font-size:.85rem;">Class Types</div></div>
       <div><div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--accent)">8</div><div style="color:rgba(255,255,255,.6);font-size:.85rem;">Expert Coaches</div></div>
     </div>
   </div>
   <div class="hero2-image">
-    <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=900&q=80" alt="Aerial performer" loading="eager" />
-    <div class="floating-badge floating-badge-1">
-      <div class="fb-icon"><i class="fas fa-medal"></i></div>
-      <div class="fb-text"><div class="label">CERTIFIED</div><div class="value">Pro Instructors</div></div>
-    </div>
-    <div class="floating-badge floating-badge-2">
-      <div class="fb-icon"><i class="fas fa-heart"></i></div>
-      <div class="fb-text"><div class="label">RATING</div><div class="value">5.0 ★★★★★</div></div>
-    </div>
+    <img src="https://www2.gvsu.edu/williamj/Assets/Dipper.JPG" alt="Aerial performer" loading="eager" />
+    
+    
   </div>
 </section>
 
@@ -155,7 +150,7 @@
     </div>
     <div class="apparatus-grid">
       <div class="apparatus-card animate-on-scroll delay-1">
-        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Pole Dancing" loading="lazy" />
+        <img src="https://airgym.family/wp-content/uploads/2020/08/pole-sport.jpg" alt="Pole Dancing" loading="lazy" />
         <div class="apparatus-overlay">
           <span class="apparatus-tag">POLE</span>
           <h3>Pole Fitness</h3>
@@ -163,7 +158,7 @@
         </div>
       </div>
       <div class="apparatus-card animate-on-scroll delay-2">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80" alt="Aerial Silks" loading="lazy" />
+        <img src="https://airandasanas.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdadzqvfxu%2Fimage%2Fupload%2Fv1765105610%2FIMG_1618_3_m87ujs.jpg&w=3840&q=75" alt="Aerial Silks" loading="lazy" />
         <div class="apparatus-overlay">
           <span class="apparatus-tag">SILKS</span>
           <h3>Aerial Silks</h3>
@@ -171,7 +166,7 @@
         </div>
       </div>
       <div class="apparatus-card animate-on-scroll delay-3">
-        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&q=80" alt="Lyra Hoop" loading="lazy" />
+        <img src="https://aerialnonsense.com.au/cdn/shop/files/Aerial_Nonsense_-_Final_Edits-66.jpg?v=1748069226" alt="Lyra Hoop" loading="lazy" />
         <div class="apparatus-overlay">
           <span class="apparatus-tag">LYRA</span>
           <h3>Lyra / Aerial Hoop</h3>
@@ -388,7 +383,7 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:1fr;gap:4rem;" class="faq-newsletter-grid">
       <div>
-        <div class="animate-on-scroll">
+        <div class="animate-on-scroll text-center">
           <span class="section-label">FAQ</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
         </div>
@@ -436,13 +431,10 @@
 <footer class="footer" aria-label="Site footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-brand-logo">
+      <a href="../index.html" class="brand" style="text-decoration: none; margin-bottom: 1.5rem; display: inline-flex;">
         <div class="brand-logo">🩰</div>
-        <div>
-          <div class="footer-brand-name">Pole Dancing</div>
-          <div class="footer-brand-tagline">Aerial Fitness Studio</div>
-        </div>
-      </div>
+        <span class="brand-name">Pole <span>Dancing</span></span>
+      </a>
       <p class="footer-desc">Empowering bodies and spirits through the art of aerial movement. Join our community and discover your strength.</p>
       <div class="social-links">
         <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>

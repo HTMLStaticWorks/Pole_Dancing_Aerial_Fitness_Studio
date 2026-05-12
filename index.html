@@ -34,9 +34,7 @@
 
     <!-- Desktop Actions -->
     <div class="nav-actions">
-      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL">
-        <i class="fas fa-language"></i>
-      </button>
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 800;">RTL</button>
       <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme">
         <i class="theme-toggle-icon fas fa-moon"></i>
       </button>
@@ -60,8 +58,10 @@
   <a href="pages/blog.html" class="nav-link">Blog</a>
   <a href="pages/contact.html" class="nav-link">Contact</a>
   <div class="mobile-menu-actions">
-    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
-    <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    <div class="mobile-menu-row">
+      <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()" style="font-weight: 800;">RTL</button>
+      <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
+    </div>
     <a href="pages/login.html" class="btn btn-primary">Login</a>
   </div>
 </div>
@@ -104,22 +104,12 @@
           <span class="hero-stat-number"><span data-counter data-target="12" data-suffix="+">12+</span></span>
           <span class="hero-stat-label">Class Types</span>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat-number"><span data-counter data-target="8" data-suffix="">8</span></span>
-          <span class="hero-stat-label">Instructors</span>
-        </div>
-        <div class="hero-stat">
-          <span class="hero-stat-number"><span data-counter data-target="5" data-suffix="★">5★</span></span>
-          <span class="hero-stat-label">Rating</span>
-        </div>
+        
       </div>
     </div>
   </div>
 
-  <div class="hero-scroll">
-    <span>SCROLL</span>
-    <div class="scroll-line"></div>
-  </div>
+  
 </section>
 
 <!-- ══ SECTION 2: FEATURES ══ -->
@@ -132,34 +122,64 @@
     </div>
     <div class="features-grid">
       <div class="feature-card animate-on-scroll delay-1">
-        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
-        <h3>Certified Instructors</h3>
-        <p>Every coach holds professional aerial & fitness certifications with years of performance experience.</p>
+        <div class="feature-card-img-wrapper">
+          <img src="https://polemovement.com/wp-content/uploads/2023/11/DSC6037-scaled-e1738353012458.jpg" alt="Certified Instructors" class="feature-card-img" />
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+          <h3>Certified Instructors</h3>
+          <p>Every coach holds professional aerial & fitness certifications with years of performance experience.</p>
+        </div>
       </div>
       <div class="feature-card animate-on-scroll delay-2">
-        <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
-        <h3>All Skill Levels</h3>
-        <p>Beginner-friendly classes through advanced training — find exactly where you belong on your journey.</p>
+        <div class="feature-card-img-wrapper">
+          <img src="https://poleathletica.com/sites/default/files/jo_tg_v.png" alt="All Skill Levels" class="feature-card-img" />
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>All Skill Levels</h3>
+          <p>Beginner-friendly classes through advanced training — find exactly where you belong on your journey.</p>
+        </div>
       </div>
       <div class="feature-card animate-on-scroll delay-3">
-        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>Safety First</h3>
-        <p>Premium rigging, crash mats, and spotting techniques ensure a safe environment for every student.</p>
+        <div class="feature-card-img-wrapper">
+          <img src="https://images.squarespace-cdn.com/content/v1/624112386586776804cee26b/1768424161124-NUHMWQ84DGDWXK9JRBSM/IMG_8281.jpg?format=750w" alt="Safety First" class="feature-card-img" />
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Safety First</h3>
+          <p>Premium rigging, crash mats, and spotting techniques ensure a safe environment for every student.</p>
+        </div>
       </div>
       <div class="feature-card animate-on-scroll delay-4">
-        <div class="feature-icon"><i class="fas fa-users"></i></div>
-        <h3>Community Spirit</h3>
-        <p>Join a welcoming, body-positive community that celebrates every step of your aerial adventure.</p>
+        <div class="feature-card-img-wrapper">
+          <img src="https://imgmediagumlet.lbb.in/media/2023/03/640083c456613d36aad1192a_1677755332434.jpg" alt="Community Spirit" class="feature-card-img" />
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon"><i class="fas fa-users"></i></div>
+          <h3>Community Spirit</h3>
+          <p>Join a welcoming, body-positive community that celebrates every step of your aerial adventure.</p>
+        </div>
       </div>
       <div class="feature-card animate-on-scroll delay-5">
-        <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
-        <h3>Flexible Scheduling</h3>
-        <p>Morning, evening, and weekend classes designed to fit seamlessly into your busy lifestyle.</p>
+        <div class="feature-card-img-wrapper">
+          <img src="https://media.istockphoto.com/id/1059285504/photo/strong-and-fit-red-haired-pole-dancer-making-pole-flow.jpg?s=612x612&w=0&k=20&c=ifLlD4gZzqtQY0BoWh7ObjDIq7b2dkzDaTRQ-Q_lAFI=" alt="Flexible Scheduling" class="feature-card-img" />
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>Flexible Scheduling</h3>
+          <p>Morning, evening, and weekend classes designed to fit seamlessly into your busy lifestyle.</p>
+        </div>
       </div>
       <div class="feature-card animate-on-scroll delay-1">
-        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
-        <h3>Online Booking</h3>
-        <p>Reserve your spot in any class with our easy online membership and booking system.</p>
+        <div class="feature-card-img-wrapper">
+          <img src="https://www.hotelpushpainn.com/ticket.jpg" alt="Online Booking" class="feature-card-img" />
+        </div>
+        <div class="feature-card-content">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Online Booking</h3>
+          <p>Reserve your spot in any class with our easy online membership and booking system.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -173,7 +193,7 @@
       <h2 class="section-title">Find Your Perfect Class</h2>
       <p class="section-desc">From graceful silks to empowering pole, every apparatus offers a unique path to strength and artistry.</p>
     </div>
-    <div class="classes-grid">
+    <div class="classes-grid home-classes-grid">
       <div class="class-card animate-on-scroll delay-1">
         <div class="class-card-img">
           <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&q=80" alt="Pole Dancing class" loading="lazy" />
@@ -181,7 +201,7 @@
         </div>
         <div class="class-card-body">
           <h3>Pole Fitness</h3>
-          <p>Master spins, climbs, and inversions while building incredible upper body and core strength.</p>
+          <p>Master spins, climbs, and inversions while building incredible and core strength.</p>
           <div class="class-meta">
             <span><i class="fas fa-clock"></i> 60 min</span>
             <span><i class="fas fa-users"></i> Max 8</span>
@@ -271,34 +291,42 @@
     <!-- Filter Buttons -->
     <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem;">
       <button class="btn btn-primary btn-sm" data-filter="all">All</button>
-      <button class="btn btn-secondary btn-sm" data-filter="pole">Pole</button>
-      <button class="btn btn-secondary btn-sm" data-filter="silks">Silks</button>
-      <button class="btn btn-secondary btn-sm" data-filter="lyra">Lyra</button>
+      <button class="btn btn-secondary btn-sm" data-filter="all">Pole</button>
+      <button class="btn btn-secondary btn-sm" data-filter="all">Silks</button>
+      <button class="btn btn-secondary btn-sm" data-filter="all">Lyra</button>
     </div>
 
     <div class="gallery-grid">
-      <div class="gallery-item tall" data-category="pole">
-        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=500&q=80" alt="Pole performer" loading="lazy" />
+      <div class="gallery-item" data-category="pole">
+        <img src="https://poleconvention.com/wp-content/uploads/2019/12/cardiovascular.png" alt="Pole performer" loading="lazy" />
         <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
       </div>
       <div class="gallery-item" data-category="silks">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=80" alt="Aerial silks" loading="lazy" />
+        <img src="https://static.toiimg.com/thumb/width-400,resizemode-4,msid-119940459/bt03-CC-Pole-dancing-01.jpg" alt="Aerial silks" loading="lazy" />
         <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
       </div>
       <div class="gallery-item" data-category="lyra">
-        <img src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=500&q=80" alt="Lyra hoop" loading="lazy" />
+        <img src="https://d1x85y5zfv5cxq.cloudfront.net/images/_1068xAUTO_crop_center-center_none/14310/pole9.webp" alt="Lyra hoop" loading="lazy" />
         <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
       </div>
-      <div class="gallery-item wide" data-category="pole">
-        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80" alt="Pole fitness" loading="lazy" />
+      <div class="gallery-item" data-category="pole">
+        <img src="https://www.lupitpole.com/storage/fm/pole-dancing-and-self-expression.jpg" alt="Pole fitness" loading="lazy" />
         <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
       </div>
       <div class="gallery-item" data-category="silks">
-        <img src="https://images.unsplash.com/photo-1601758124277-9eb8f823e6cb?w=500&q=80" alt="Aerial arts" loading="lazy" />
+        <img src="https://i.ytimg.com/vi/t42nmm7YvZQ/maxresdefault.jpg" alt="Aerial arts" loading="lazy" />
         <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
       </div>
       <div class="gallery-item" data-category="lyra">
-        <img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=500&q=80" alt="Dance performance" loading="lazy" />
+        <img src="https://th-i.thgim.com/public/children/ynpcvv/article69122239.ece/alternates/FREE_1200/DSC06175%203.jpg" alt="Dance performance" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" data-category="lyra">
+        <img src="https://media.istockphoto.com/id/2207864623/photo/young-women-practicing-pole-dance-exercising-in-a-gym.jpg?s=612x612&w=0&k=20&c=Fhcec-DXbyf0qJhPaH1uoGEbIFzaPsHh75ijYzN-Wew=" alt="Dance performance" loading="lazy" />
+        <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
+      </div>
+      <div class="gallery-item" data-category="lyra">
+        <img src="https://imgmediagumlet.lbb.in/media/2024/05/665465fcb69ae7083f302d0a_1716807164795.jpg" alt="Dance performance" loading="lazy" />
         <div class="gallery-item-overlay"><i class="fas fa-expand"></i></div>
       </div>
     </div>
@@ -315,7 +343,6 @@
     </div>
     <div class="packages-grid">
       <div class="package-card animate-on-scroll delay-1">
-        <span class="package-icon">🎀</span>
         <h3 class="package-name">Sparkle Party</h3>
         <div class="package-price"><sup>₹</sup>4,999<sub>/group</sub></div>
         <p class="package-desc">Perfect for small celebrations up to 6 guests.</p>
@@ -330,7 +357,6 @@
       </div>
       <div class="package-card featured animate-on-scroll delay-2">
         <span class="package-badge">Most Popular</span>
-        <span class="package-icon">🥂</span>
         <h3 class="package-name">Glamour Gala</h3>
         <div class="package-price"><sup>₹</sup>8,999<sub>/group</sub></div>
         <p class="package-desc">The ultimate party experience for up to 12 guests.</p>
@@ -345,7 +371,6 @@
         <a href="pages/contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book Package</a>
       </div>
       <div class="package-card animate-on-scroll delay-3">
-        <span class="package-icon">👑</span>
         <h3 class="package-name">Royal Experience</h3>
         <div class="package-price"><sup>₹</sup>14,999<sub>/group</sub></div>
         <p class="package-desc">Premium full-day event for up to 20 guests.</p>
@@ -426,13 +451,10 @@
 <footer class="footer" aria-label="Site footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-brand-logo">
+      <a href="index.html" class="brand" style="text-decoration: none; margin-bottom: 1.5rem; display: inline-flex;">
         <div class="brand-logo">🩰</div>
-        <div>
-          <div class="footer-brand-name">Pole Dancing</div>
-          <div class="footer-brand-tagline">Aerial Fitness Studio</div>
-        </div>
-      </div>
+        <span class="brand-name">Pole <span>Dancing</span></span>
+      </a>
       <p class="footer-desc">Empowering bodies and spirits through the art of aerial movement. Join our community and discover your strength.</p>
       <div class="social-links">
         <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>

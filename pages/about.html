@@ -23,13 +23,52 @@
     .mission-image-badge .big { font-family:var(--font-display);font-size:2.5rem;font-weight:900;display:block;line-height:1; }
     .mission-image-badge small { font-size:.8rem;opacity:.9; }
     .values-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; }
+    @media(min-width:768px) and (max-width:1200px){
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     .value-card {
-      padding:2rem 1.5rem; border-radius:var(--radius-lg); text-align:center;
+      padding:0 0 2rem 0; border-radius:var(--radius-lg); text-align:center;
       border:1px solid var(--border); background:var(--bg-card);
       transition:var(--transition-bounce);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
     }
     .value-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-color:var(--primary-light); }
+    .value-card-img-wrapper {
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+    .value-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .value-card:hover .value-card-img {
+      transform: scale(1.08);
+    }
+    .value-card-content {
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .value-icon { font-size:2.5rem; display:block; margin-bottom:1rem; }
+    @media (min-width: 768px) and (max-width: 1200px) {
+      .about-team-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      .about-team-grid .team-card:nth-child(4) {
+        grid-column: span 1 !important;
+        justify-self: auto !important;
+        max-width: none !important;
+        width: auto !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -47,7 +86,7 @@
       <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
     <div class="nav-actions">
-      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL"><i class="fas fa-language"></i></button>
+      <button class="nav-icon-btn" onclick="window.PD.RTLManager.toggle()" title="Toggle RTL" aria-label="Toggle RTL" style="font-size: 0.78rem; font-weight: 800;">RTL</button>
       <button class="nav-icon-btn" onclick="window.PD.ThemeManager.toggle()" title="Toggle Theme" aria-label="Toggle theme"><i class="theme-toggle-icon fas fa-moon"></i></button>
       <a href="login.html" class="btn btn-primary btn-sm">Login</a>
     </div>
@@ -64,7 +103,7 @@
   <a href="blog.html" class="nav-link">Blog</a>
   <a href="contact.html" class="nav-link">Contact</a>
   <div class="mobile-menu-actions">
-    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()"><i class="fas fa-language"></i></button>
+    <button class="btn btn-ghost" onclick="window.PD.RTLManager.toggle()" style="font-weight: 800;">RTL</button>
     <button class="btn btn-ghost" onclick="window.PD.ThemeManager.toggle()"><i class="theme-toggle-icon fas fa-moon"></i></button>
     <a href="login.html" class="btn btn-primary">Login</a>
   </div>
@@ -72,9 +111,7 @@
 
 <!-- PAGE HEADER -->
 <div class="page-header">
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="../index.html">Home</a><span>/</span><span class="current">About Us</span>
-  </nav>
+  
   <h1>Our Story</h1>
   <p>From a small studio with one pole to Chennai's premier aerial fitness destination — discover the passion behind every class.</p>
 </div>
@@ -83,18 +120,18 @@
 <section class="section" aria-label="Our mission">
   <div class="container">
     <div class="mission-grid">
-      <div class="animate-on-scroll">
+      <div class="animate-on-scroll" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
         <span class="section-label">Our Mission</span>
         <h2 class="section-title">Strength, Grace &amp; Community</h2>
         <p style="margin-bottom:1.5rem;">Founded in 2016 by Kavya Sundaram, Pole Dancing Studio began as a vision to bring aerial arts to everyday people. What started with two poles in a borrowed space has grown into a vibrant 3,000 sq ft studio, home to over 500 active students.</p>
         <p style="margin-bottom:2rem;">We believe that aerial fitness is for every body, every age, every background. Our inclusive, empowering approach breaks barriers and builds confidence that extends far beyond the studio walls.</p>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <div class="about-actions" style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;">
           <a href="register.html" class="btn btn-primary"><i class="fas fa-play"></i> Start Your Journey</a>
           <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i> Talk to Us</a>
         </div>
       </div>
       <div class="mission-image animate-on-scroll delay-2">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Aerial performer in studio" loading="lazy" />
+        <img src="https://www.emilyspolefitness.co.uk/wp-content/uploads/2025/09/Shannel.jpg" alt="Aerial performer in studio" loading="lazy" />
         <div class="mission-image-badge">
           <span class="big">8+</span>
           <small>Years of Excellence</small>
@@ -140,24 +177,44 @@
     </div>
     <div class="values-grid">
       <div class="value-card animate-on-scroll delay-1">
-        <span class="value-icon">💪</span>
-        <h3>Empowerment</h3>
-        <p>We help every student discover strength they never knew they had — physically and mentally.</p>
+        <div class="value-card-img-wrapper">
+          <img src="https://polemovement.com/wp-content/uploads/2023/11/DSC6411-scaled-e1738821049488.jpg" alt="Empowerment" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <span class="value-icon">💪</span>
+          <h3>Empowerment</h3>
+          <p>We help every student discover strength they never knew they had — physically and mentally.</p>
+        </div>
       </div>
       <div class="value-card animate-on-scroll delay-2">
-        <span class="value-icon">🌈</span>
-        <h3>Inclusivity</h3>
-        <p>Every body is welcome. We celebrate diversity and create a judgment-free space for all.</p>
+        <div class="value-card-img-wrapper">
+          <img src="https://offloadmedia.feverup.com/secretmanchester.com/wp-content/uploads/2019/03/17104043/damien-1024x902.jpg" alt="Inclusivity" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <span class="value-icon">🌈</span>
+          <h3>Inclusivity</h3>
+          <p>Every body is welcome. We celebrate diversity and create a judgment-free space for all.</p>
+        </div>
       </div>
       <div class="value-card animate-on-scroll delay-3">
-        <span class="value-icon">🛡️</span>
-        <h3>Safety</h3>
-        <p>Rigorous safety protocols, quality equipment, and trained spotters ensure you're always protected.</p>
+        <div class="value-card-img-wrapper">
+          <img src="https://media.istockphoto.com/id/646804686/photo/stretching-before-pole-dancing.jpg?s=612x612&w=0&k=20&c=9L6saWl4XiwzYUGVfluxdRK7AapULU2iY6EW7PP5CtU=" alt="Safety" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <span class="value-icon">🛡️</span>
+          <h3>Safety</h3>
+          <p>Rigorous safety protocols, quality equipment, and trained spotters ensure you're always protected.</p>
+        </div>
       </div>
       <div class="value-card animate-on-scroll delay-4">
-        <span class="value-icon">🎯</span>
-        <h3>Excellence</h3>
-        <p>We hold our teaching and student experience to the highest professional standards.</p>
+        <div class="value-card-img-wrapper">
+          <img src="https://cdn.shopify.com/s/files/1/0406/9647/9906/files/POLE_DANCE_CIRCO_480x480.jpg?v=1685123932" alt="Excellence" class="value-card-img" />
+        </div>
+        <div class="value-card-content">
+          <span class="value-icon">🎯</span>
+          <h3>Excellence</h3>
+          <p>We hold our teaching and student experience to the highest professional standards.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -171,7 +228,7 @@
       <h2 class="section-title">Meet Your Coaches</h2>
       <p class="section-desc">Passionate, certified, and dedicated to your growth — our instructors bring world-class expertise to every class.</p>
     </div>
-    <div class="team-grid">
+    <div class="team-grid about-team-grid">
       <div class="team-card animate-on-scroll delay-1">
         <div class="team-avatar">
           <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Kavya Sundaram" loading="lazy" />
@@ -239,7 +296,10 @@
 <footer class="footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <div class="footer-brand-logo"><div class="brand-logo">🩰</div><div><div class="footer-brand-name">Pole Dancing</div><div class="footer-brand-tagline">Aerial Fitness Studio</div></div></div>
+      <a href="../index.html" class="brand" style="text-decoration: none; margin-bottom: 1.5rem; display: inline-flex;">
+        <div class="brand-logo">🩰</div>
+        <span class="brand-name">Pole <span>Dancing</span></span>
+      </a>
       <p class="footer-desc">Empowering bodies and spirits through the art of aerial movement.</p>
       <div class="social-links">
         <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
