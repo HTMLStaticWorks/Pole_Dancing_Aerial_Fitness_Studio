@@ -306,7 +306,7 @@ p { color: var(--text-secondary); line-height: 1.8; }
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(135deg, var(--secondary) 0%, #2d1b3d 100%);
-  z-index: calc(var(--z-nav) - 1);
+  z-index: calc(var(--z-nav) + 10);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1468,12 +1468,19 @@ select.form-control { appearance: none; cursor: pointer; }
 .footer-bottom-links a:hover { color: var(--primary); }
 
 /* ── Schedule Table ── */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
 .schedule-table {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
 }
 .schedule-table th {
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
@@ -1748,6 +1755,9 @@ select.form-control { appearance: none; cursor: pointer; }
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 3rem;
   }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 
 /* 1024px Desktop */
@@ -1795,6 +1805,17 @@ select.form-control { appearance: none; cursor: pointer; }
   .btn-lg { padding: 0.9rem 1.8rem; font-size: 0.95rem; }
   .footer-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: 1fr; }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  .footer-bottom-links {
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    font-size: 0.78rem;
+  }
 }
 
 /* ── Additional Card Layout & Centering Tweaks ── */

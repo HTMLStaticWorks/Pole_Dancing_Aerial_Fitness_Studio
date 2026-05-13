@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Pole Dancing Studio — Alternative landing page featuring membership, schedule, and instructors." />
   <title>Pole Dancing Studio — Home 2</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🩰</text></svg>">
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/dark-mode.css" />
   <link id="rtl-stylesheet" rel="stylesheet" href="../assets/css/rtl.css" disabled />
@@ -12,7 +13,7 @@
   <style>
     /* Home2 specific: split hero */
     .hero2 {
-      min-height: 100vh;
+      min-height: 80vh;
       display: grid;
       grid-template-columns: 1fr;
       position: relative;
@@ -23,13 +24,13 @@
     .hero2-content {
       background: linear-gradient(135deg, var(--secondary) 0%, #2d1b3d 100%);
       display: flex; flex-direction: column; justify-content: center;
-      padding: calc(var(--nav-height) + 4.5rem) 3rem 5.5rem;
+      padding: calc(var(--nav-height) + 3.5rem) 2rem 4.5rem;
       position: relative; z-index: 1;
     }
     .hero2-image {
-      position: relative; min-height: 50vh;
+      position: relative; min-height: 35vh;
     }
-    @media(min-width:1024px){ .hero2-image { min-height: 100vh; } }
+    @media(min-width:1024px){ .hero2-image { min-height: 80vh; } }
     .hero2-image img { width: 100%; height: 100%; object-fit: cover; }
     .hero2-image::after {
       content: '';
@@ -194,66 +195,78 @@
       <button class="tab-btn" onclick="showTab('sat',this)">Sat</button>
     </div>
     <div id="mon" class="tab-content active">
-      <table class="schedule-table">
-        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>07:00 AM</td><td><span class="class-tag tag-pole">Pole Basics</span></td><td>Kavya S.</td><td>Beginner</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>10:00 AM</td><td><span class="class-tag tag-silks">Aerial Silks Intro</span></td><td>Riya M.</td><td>All levels</td><td>2 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>06:00 PM</td><td><span class="class-tag tag-lyra">Lyra Flow</span></td><td>Sneha K.</td><td>Intermediate</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>07:30 PM</td><td><span class="class-tag tag-pole">Pole Intermediate</span></td><td>Kavya S.</td><td>Intermediate</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="schedule-table">
+          <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>07:00 AM</td><td><span class="class-tag tag-pole">Pole Basics</span></td><td>Kavya S.</td><td>Beginner</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>10:00 AM</td><td><span class="class-tag tag-silks">Aerial Silks Intro</span></td><td>Riya M.</td><td>All levels</td><td>2 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>06:00 PM</td><td><span class="class-tag tag-lyra">Lyra Flow</span></td><td>Sneha K.</td><td>Intermediate</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>07:30 PM</td><td><span class="class-tag tag-pole">Pole Intermediate</span></td><td>Kavya S.</td><td>Intermediate</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div id="tue" class="tab-content">
-      <table class="schedule-table">
-        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>08:00 AM</td><td><span class="class-tag tag-aerial">Flexibility & Stretch</span></td><td>Pritha R.</td><td>All levels</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>05:30 PM</td><td><span class="class-tag tag-silks">Aerial Silks Adv.</span></td><td>Riya M.</td><td>Advanced</td><td>1 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>07:00 PM</td><td><span class="class-tag tag-pole">Exotic Pole</span></td><td>Kavya S.</td><td>Intermediate</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="schedule-table">
+          <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>08:00 AM</td><td><span class="class-tag tag-aerial">Flexibility & Stretch</span></td><td>Pritha R.</td><td>All levels</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>05:30 PM</td><td><span class="class-tag tag-silks">Aerial Silks Adv.</span></td><td>Riya M.</td><td>Advanced</td><td>1 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>07:00 PM</td><td><span class="class-tag tag-pole">Exotic Pole</span></td><td>Kavya S.</td><td>Intermediate</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div id="wed" class="tab-content">
-      <table class="schedule-table">
-        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>07:00 AM</td><td><span class="class-tag tag-lyra">Lyra Beginners</span></td><td>Sneha K.</td><td>Beginner</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>10:00 AM</td><td><span class="class-tag tag-pole">Pole Fitness</span></td><td>Kavya S.</td><td>All levels</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>06:00 PM</td><td><span class="class-tag tag-silks">Silks & Strength</span></td><td>Riya M.</td><td>Intermediate</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="schedule-table">
+          <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>07:00 AM</td><td><span class="class-tag tag-lyra">Lyra Beginners</span></td><td>Sneha K.</td><td>Beginner</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>10:00 AM</td><td><span class="class-tag tag-pole">Pole Fitness</span></td><td>Kavya S.</td><td>All levels</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>06:00 PM</td><td><span class="class-tag tag-silks">Silks & Strength</span></td><td>Riya M.</td><td>Intermediate</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div id="thu" class="tab-content">
-      <table class="schedule-table">
-        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>09:00 AM</td><td><span class="class-tag tag-aerial">Aerial Yoga</span></td><td>Pritha R.</td><td>Beginner</td><td>7 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>06:00 PM</td><td><span class="class-tag tag-pole">Pole Advanced</span></td><td>Kavya S.</td><td>Advanced</td><td>2 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>07:30 PM</td><td><span class="class-tag tag-lyra">Lyra Performance</span></td><td>Sneha K.</td><td>Advanced</td><td>Full</td><td><button class="btn btn-secondary btn-sm" disabled>Waitlist</button></td></tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="schedule-table">
+          <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>09:00 AM</td><td><span class="class-tag tag-aerial">Aerial Yoga</span></td><td>Pritha R.</td><td>Beginner</td><td>7 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>06:00 PM</td><td><span class="class-tag tag-pole">Pole Advanced</span></td><td>Kavya S.</td><td>Advanced</td><td>2 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>07:30 PM</td><td><span class="class-tag tag-lyra">Lyra Performance</span></td><td>Sneha K.</td><td>Advanced</td><td>Full</td><td><button class="btn btn-secondary btn-sm" disabled>Waitlist</button></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div id="fri" class="tab-content">
-      <table class="schedule-table">
-        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>07:00 AM</td><td><span class="class-tag tag-pole">Morning Pole Flow</span></td><td>Kavya S.</td><td>All levels</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>05:00 PM</td><td><span class="class-tag tag-silks">Silks Choreo</span></td><td>Riya M.</td><td>Intermediate</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>07:00 PM</td><td><span class="class-tag tag-lyra">Friday Lyra Special</span></td><td>Sneha K.</td><td>All levels</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="schedule-table">
+          <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>07:00 AM</td><td><span class="class-tag tag-pole">Morning Pole Flow</span></td><td>Kavya S.</td><td>All levels</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>05:00 PM</td><td><span class="class-tag tag-silks">Silks Choreo</span></td><td>Riya M.</td><td>Intermediate</td><td>4 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>07:00 PM</td><td><span class="class-tag tag-lyra">Friday Lyra Special</span></td><td>Sneha K.</td><td>All levels</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div id="sat" class="tab-content">
-      <table class="schedule-table">
-        <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>08:00 AM</td><td><span class="class-tag tag-pole">Weekend Beginners</span></td><td>Kavya S.</td><td>Beginner</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>10:00 AM</td><td><span class="class-tag tag-silks">Saturday Silks</span></td><td>Riya M.</td><td>All levels</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>12:00 PM</td><td><span class="class-tag tag-lyra">Party & Lyra</span></td><td>Sneha K.</td><td>All levels</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-          <tr><td>04:00 PM</td><td><span class="class-tag tag-aerial">Open Practice</span></td><td>All coaches</td><td>Intermediate+</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="schedule-table">
+          <thead><tr><th>Time</th><th>Class</th><th>Instructor</th><th>Level</th><th>Spots</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>08:00 AM</td><td><span class="class-tag tag-pole">Weekend Beginners</span></td><td>Kavya S.</td><td>Beginner</td><td>6 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>10:00 AM</td><td><span class="class-tag tag-silks">Saturday Silks</span></td><td>Riya M.</td><td>All levels</td><td>5 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>12:00 PM</td><td><span class="class-tag tag-lyra">Party & Lyra</span></td><td>Sneha K.</td><td>All levels</td><td>3 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+            <tr><td>04:00 PM</td><td><span class="class-tag tag-aerial">Open Practice</span></td><td>All coaches</td><td>Intermediate+</td><td>8 left</td><td><a href="register.html" class="btn btn-primary btn-sm">Book</a></td></tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </section>
@@ -474,7 +487,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Pole Dancing Studio. All rights reserved.</p>
+    <p>&copy; 2026 Pole Dancing Studio. All rights reserved.</p>
     <div class="footer-bottom-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Service</a>
